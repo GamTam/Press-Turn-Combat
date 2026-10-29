@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [System.Serializable]
 public enum BattleState
@@ -29,7 +30,7 @@ public class BattleManager : Singleton<BattleManager>
 
     //TEMP
     [SerializeField] private float _timer;
-    private float _timerDuration = 5;
+    private float _timerDuration = 10f;
     
     public IEnumerator Start()
     {
@@ -48,7 +49,7 @@ public class BattleManager : Singleton<BattleManager>
     {
         _timer -= Time.deltaTime;
         
-        if (_timer > 0f) return;
+        if (_timer > 0f && !Keyboard.current.spaceKey.wasPressedThisFrame) return;
         _timer = _timerDuration;
 
         FighterTeam targetTeam = Teams[(CurrentTeam + 1) % 2];
@@ -59,7 +60,7 @@ public class BattleManager : Singleton<BattleManager>
             targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
         }
         
-        Teams[CurrentTeam].ForceAttack(targetFighter);
+        Teams[CurrentTeam].RandomAttack(targetFighter);
         UpdateState();
     }
 

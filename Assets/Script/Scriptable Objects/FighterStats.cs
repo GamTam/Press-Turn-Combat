@@ -17,6 +17,16 @@ public enum DamageTypes
     Dark = 512
 }
 
+public enum AffinityTypes
+{
+    NONE,
+    WEAK,
+    RESIST,
+    NULL,
+    REPEL,
+    ABSORB
+}
+
 [System.Serializable]
 public enum BuffType
 {
@@ -80,6 +90,7 @@ public struct FighterStats
     public int MaxHP;
     public int MaxMP;
     public DamageTypes BaseAttackType;
+    public Dictionary<DamageTypes, AffinityTypes> BaseAffinities;
     
     [Space]
     public int STR;

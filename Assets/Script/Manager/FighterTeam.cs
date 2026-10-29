@@ -16,7 +16,7 @@ public class FighterTeam : MonoBehaviour
         else BattleManager.Instance.Teams[1] = this;
     }
 
-    public void ForceAttack(Fighter target)
+    public void RandomAttack(Fighter target)
     {
         bool useSkill = Random.Range(0, 100) > 49;
 
