@@ -35,13 +35,25 @@ public enum BuffType
 }
 
 [System.Serializable]
+public struct Buffs
+{
+    public int TierATK;
+    public int TierDEF;
+    public int TierSPD;
+    
+    public int CooldownATK;
+    public int CooldownDEF;
+    public int CooldownSPD;
+}
+
+[System.Serializable]
 [System.Flags]
 public enum BuffStats
 {
     NONE = 0,
     ATK = 1,
     DEF = 2,
-    AGI = 4
+    SPD = 4
 }
 
 [System.Serializable]

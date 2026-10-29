@@ -1,17 +1,5 @@
 using UnityEngine;
 
-[System.Serializable]
-public struct Buffs
-{
-    public int TierATK;
-    public int TierDEF;
-    public int TierSPD;
-    
-    public int CooldownATK;
-    public int CooldownDEF;
-    public int CooldownSPD;
-}
-
 public class Fighter : MonoBehaviour
 {
     [SerializeField] protected FighterStats _stats = new FighterStats();
@@ -105,8 +93,7 @@ public class Fighter : MonoBehaviour
     {
         AffinityTypes targetAffinity = AffinityTypes.NONE;
         
-        if (skill.CostsHP & _HP < skill.CostAmount ||
-            !skill.CostsHP & _MP < skill.CostAmount)
+        if (CheckIfCanUseSkill(skill))
         {
             UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + Skills[0].Name + "... but couldn't afford it!\n");
             return targetAffinity;
