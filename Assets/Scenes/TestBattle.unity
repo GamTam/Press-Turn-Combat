@@ -321,14 +321,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
-    Name: Ronathan McDonathan
+    Name: Yosuke Hanamura
     MaxHP: 250
     MaxMP: 100
     BaseAttackType: 4
     BaseAffinities:
     - key: 64
       value: 1
-    - key: 16
+    - key: 128
       value: 2
     - key: 512
       value: 1
@@ -338,12 +338,12 @@ MonoBehaviour:
     AGI: 6
     LUK: 8
     Skills:
-    - Name: Agi
+    - Name: Garu
       CostAmount: 3
       CostsHP: 0
       BaseDamage: 50
       UseMagForDamageCalc: 0
-      ElementType: 16
+      ElementType: 128
       Multihit: 0
       Healing: 0
       BuffType: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
     AGI: 6
     LUK: 8
     Skills:
-    - Name: Mudo
+    - Name: Eiha
       CostAmount: 4
       CostsHP: 0
       BaseDamage: 50
@@ -400,8 +400,8 @@ MonoBehaviour:
       BuffType: 0
       BuffStats: 0
       HowManyBuffTiers: 0
-      StatusEffect: 1
-      StatusEffectChance: 10
+      StatusEffect: 0
+      StatusEffectChance: 0
       PhysCharge: 0
       MagCharge: 0
       PressTurnsToAdd: 
