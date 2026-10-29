@@ -4,16 +4,16 @@ using UnityEngine;
 [System.Serializable]
 public enum DamageTypes
 {
-    Almighty = 1,
-    Strike = 2,
-    Slash = 4,
-    Pierce = 8,
-    Fire = 16,
-    Ice = 32,
-    Elec = 64,
-    Wind = 128,
-    Light = 256,
-    Dark = 512
+    ALLMIGHTY = 1,
+    STRIKE = 2,
+    SLASH = 4,
+    PIERCE = 8,
+    FIRE = 16,
+    ICE = 32,
+    ELEC = 64,
+    WIND = 128,
+    LIGHT = 256,
+    DARK = 512
 }
 
 public enum AffinityTypes
@@ -41,7 +41,7 @@ public enum BuffStats
     NONE = 0,
     ATK = 1,
     DEF = 2,
-    STR = 4
+    AGI = 4
 }
 
 [System.Serializable]

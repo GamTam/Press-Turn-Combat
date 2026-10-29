@@ -30,7 +30,19 @@ public class FighterTeam : MonoBehaviour
             currentAffinity = _party[_actingPartyMember].UseSkill(_party[_actingPartyMember].Skills[0], target);
         }
 
-        BattleManager.Instance.UpdatePressTurns(1);
+        int pressTurnsUsed = 1;
+        bool useHalfTurns = false;
+
+        if (currentAffinity == AffinityTypes.ABSORB ||
+            currentAffinity == AffinityTypes.REPEL ||
+            currentAffinity == AffinityTypes.NULL)
+            pressTurnsUsed = 99;
+        else if (currentAffinity == AffinityTypes.RESIST)
+            pressTurnsUsed = 2;
+        else if (currentAffinity == AffinityTypes.WEAK)
+            useHalfTurns = true;
+        
+        BattleManager.Instance.UpdatePressTurns(pressTurnsUsed, useHalfTurns);
 
         do
         {

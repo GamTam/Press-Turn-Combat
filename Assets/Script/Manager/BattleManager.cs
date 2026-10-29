@@ -16,8 +16,7 @@ public enum BattleState
 public enum PressTurn
 {
     Full,
-    Half,
-    Empty
+    Half
 }
 
 public class BattleManager : Singleton<BattleManager>
@@ -30,7 +29,7 @@ public class BattleManager : Singleton<BattleManager>
 
     //TEMP
     [SerializeField] private float _timer;
-    private float _timerDuration = 10f;
+    private float _timerDuration = 5f;
     
     public IEnumerator Start()
     {
@@ -39,9 +38,37 @@ public class BattleManager : Singleton<BattleManager>
         UpdateState();
     }
     
-    public void UpdatePressTurns(int turnCost)
+    public void UpdatePressTurns(int turnCost, bool useHalfTurns)
     {
-        PressTurns.Remove(0);
+        if (!useHalfTurns)
+            for (int i = 0; i < turnCost; i++)
+            {
+                PressTurns.RemoveAt(0);
+                if (PressTurns.Count == 0) break;
+            }
+        else
+        {
+            for (int i = 0; i < turnCost; i++)
+            {
+                bool usedTurn = false;
+                
+                for (int j = 0; j < PressTurns.Count; j++)
+                {
+                    if (PressTurns[j] == PressTurn.Full)
+                    {
+                        PressTurns[j] = PressTurn.Half;
+                        usedTurn = true;
+                        break;
+                    }
+                }
+
+                if (!usedTurn)
+                {
+                    PressTurns.RemoveAt(0);
+                    if (PressTurns.Count == 0) break;
+                }
+            }
+        }
     }
 
     //TEMP
