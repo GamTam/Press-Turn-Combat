@@ -12,7 +12,7 @@ public struct Buffs
     public int CooldownSPD;
 }
 
-public abstract class Fighter : MonoBehaviour
+public class Fighter : MonoBehaviour
 {
     [SerializeField] protected FighterStats _stats = new FighterStats();
     
@@ -93,7 +93,9 @@ public abstract class Fighter : MonoBehaviour
         else if (targetAffinity == AffinityTypes.ABSORB)
             str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
 
-        str += target.Name + "'s HP is now " + target.HP + "!";
+        if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
+        else str += target.Name + "'s HP is now " + target.HP + "!";
+        
         UIManager.Instance.UpdateText(str);
 
         return targetAffinity;
@@ -140,5 +142,5 @@ public abstract class Fighter : MonoBehaviour
     private void UseItem() {}
     private void Guard() {}
     
-    protected void TakeAction() {}
+    public virtual AffinityTypes TakeAction(Fighter target) { return AffinityTypes.NONE; }
 }

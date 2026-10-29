@@ -1028,22 +1028,6 @@ MonoBehaviour:
       PhysCharge: 0
       MagCharge: 0
       PressTurnsToAdd: 
-    - Name: Beast Eye
-      CostAmount: 1
-      CostsHP: 0
-      BaseDamage: 0
-      UseMagForDamageCalc: 0
-      ElementType: 1
-      Multihit: 0
-      Healing: 0
-      BuffType: 0
-      BuffStats: 0
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 010000000100000001000000i
   _HP: 0
   _MP: 0
   _currentStatusEffect: 0
