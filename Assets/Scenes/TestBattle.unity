@@ -256,6 +256,175 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1195175899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195175900}
+  - component: {fileID: 1195175901}
+  - component: {fileID: 1195175902}
+  - component: {fileID: 1195175903}
+  - component: {fileID: 1195175904}
+  m_Layer: 0
+  m_Name: PlayerTeam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195175900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195175899}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195175901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195175899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed30850ed806a54d8100f453bce97b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _party:
+  - {fileID: 1195175902}
+  - {fileID: 1195175903}
+  - {fileID: 1195175904}
+  _playerTeam: 1
+--- !u!114 &1195175902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195175899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Ronathan McDonathan
+    MaxHP: 100
+    MaxMP: 100
+    BaseAttackType: 4
+    STR: 10
+    MAG: 8
+    END: 3
+    AGI: 6
+    LUK: 8
+    Skills:
+    - Name: Agi
+      CostAmount: 3
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 0
+      ElementType: 16
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+--- !u!114 &1195175903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195175899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Ryoji Mochizuki
+    MaxHP: 100
+    MaxMP: 100
+    BaseAttackType: 8
+    STR: 10
+    MAG: 8
+    END: 3
+    AGI: 6
+    LUK: 8
+    Skills:
+    - Name: Mudo
+      CostAmount: 4
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 1
+      ElementType: 512
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 1
+      StatusEffectChance: 10
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+--- !u!114 &1195175904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195175899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Demi-fiend
+    MaxHP: 100
+    MaxMP: 100
+    BaseAttackType: 2
+    STR: 12
+    MAG: 3
+    END: 15
+    AGI: 11
+    LUK: 7
+    Skills:
+    - Name: Hell Thrust
+      CostAmount: 12
+      CostsHP: 1
+      BaseDamage: 70
+      UseMagForDamageCalc: 0
+      ElementType: 8
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
 --- !u!1 &1751179610
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,9 +469,184 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0436e72f266db545ae8eb58fc77fd1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  PressTurns: 
+  Teams:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!1 &1996927560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996927565}
+  - component: {fileID: 1996927564}
+  - component: {fileID: 1996927563}
+  - component: {fileID: 1996927562}
+  - component: {fileID: 1996927561}
+  m_Layer: 0
+  m_Name: EnemyTeam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1996927561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996927560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Evil Demi-fiend
+    MaxHP: 100
+    MaxMP: 100
+    BaseAttackType: 2
+    STR: 12
+    MAG: 3
+    END: 15
+    AGI: 11
+    LUK: 7
+    Skills:
+    - Name: Hell Thrust
+      CostAmount: 12
+      CostsHP: 1
+      BaseDamage: 70
+      UseMagForDamageCalc: 0
+      ElementType: 8
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+--- !u!114 &1996927562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996927560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Evil Ryoji
+    MaxHP: 100
+    MaxMP: 100
+    BaseAttackType: 8
+    STR: 10
+    MAG: 8
+    END: 3
+    AGI: 6
+    LUK: 8
+    Skills:
+    - Name: Mudo
+      CostAmount: 4
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 1
+      ElementType: 512
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 1
+      StatusEffectChance: 10
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+--- !u!114 &1996927563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996927560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Evil Ronathan
+    MaxHP: 100
+    MaxMP: 100
+    BaseAttackType: 4
+    STR: 10
+    MAG: 8
+    END: 3
+    AGI: 6
+    LUK: 8
+    Skills:
+    - Name: Agi
+      CostAmount: 3
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 0
+      ElementType: 16
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+--- !u!114 &1996927564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996927560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed30850ed806a54d8100f453bce97b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _party:
+  - {fileID: 1996927563}
+  - {fileID: 1996927562}
+  - {fileID: 1996927561}
+  _playerTeam: 0
+--- !u!4 &1996927565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996927560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1751179611}
+  - {fileID: 1195175900}
+  - {fileID: 1996927565}
