@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public enum DamageTypes
 {
-    ALLMIGHTY = 1,
+    ALMIGHTY = 1,
     STRIKE = 2,
     SLASH = 4,
     PIERCE = 8,
