@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-[System.Flags]
 public enum DamageTypes
 {
     Almighty = 1,
@@ -90,7 +89,7 @@ public struct FighterStats
     public int MaxHP;
     public int MaxMP;
     public DamageTypes BaseAttackType;
-    public Dictionary<DamageTypes, AffinityTypes> BaseAffinities;
+    [SerializeField] public Dictionary<DamageTypes, AffinityTypes> BaseAffinities;
     
     [Space]
     public int STR;

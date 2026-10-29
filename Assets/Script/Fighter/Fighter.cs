@@ -42,15 +42,31 @@ public abstract class Fighter : MonoBehaviour
         _MP = _stats.MaxMP;
     }
 
-    public void TakeDamage(int attackPower, DamageTypes element)
+    public AffinityTypes TakeDamage(int attackPower, DamageTypes element)
     {
-        _HP -= attackPower;
+        AffinityTypes affinityToAttack = AffinityTypes.NONE;
 
+        try { affinityToAttack = _stats.BaseAffinities[element]; }
+        catch { /* ignored */ }
+
+        if (affinityToAttack == AffinityTypes.WEAK)
+            _HP -= attackPower * 2;
+        else if (affinityToAttack == AffinityTypes.RESIST)
+            _HP -= attackPower / 2;
+        else if (affinityToAttack == AffinityTypes.ABSORB)
+            _HP += attackPower;
+        else if (affinityToAttack == AffinityTypes.NONE)
+            _HP -= attackPower;
+
+        if (_HP > _stats.MaxHP) _HP = _stats.MaxHP;
+        
         if (_HP <= 0)
         {
             _HP = 0;
             _currentStatusEffect = StatusEffectType.DEAD;
         }
+
+        return affinityToAttack;
     }
 
     private bool CheckIfCanUseSkill(Skill skill)
@@ -61,21 +77,62 @@ public abstract class Fighter : MonoBehaviour
         return true;
     }
 
-    public void BasicAttack(Fighter target)
+    public AffinityTypes BasicAttack(Fighter target)
     {
-        target.TakeDamage((int) Random.Range(_stats.STR * 0.75f, _stats.STR * 1.25f), _stats.BaseAttackType);
+        AffinityTypes targetAffinity = target.TakeDamage((int)Random.Range(_stats.STR * 0.75f, _stats.STR * 1.25f),
+            _stats.BaseAttackType);
+
+        string str = _stats.Name + " attacked " + target.Name + "!\n";
+        
+        if (targetAffinity == AffinityTypes.WEAK)
+            str += target.Name + " was weak to " + _stats.Name + "'s attack!\n";
+        else if (targetAffinity == AffinityTypes.RESIST)
+            str += target.Name + " resisted " + _stats.Name + "'s attack!\n";
+        else if (targetAffinity == AffinityTypes.NULL)
+            str += target.Name + " blocked " + _stats.Name + "'s attack!\n";
+        else if (targetAffinity == AffinityTypes.ABSORB)
+            str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
+
+        str += target.Name + "'s HP is now " + target.HP + "!";
+        Debug.Log(str);
+
+        return targetAffinity;
     }
     
-    public bool UseSkill(Skill skill, Fighter target = null)
+    public AffinityTypes UseSkill(Skill skill, Fighter target = null)
     {
-        if (skill.CostsHP & _HP < skill.CostAmount) return false;
-        if (!skill.CostsHP & _MP < skill.CostAmount) return false;
+        AffinityTypes targetAffinity = AffinityTypes.NONE;
+        
+        if (skill.CostsHP & _HP < skill.CostAmount ||
+            !skill.CostsHP & _MP < skill.CostAmount)
+        {
+            Debug.Log(_stats.Name + " tried to cast " + Skills[0].Name + "... but couldn't afford it!\n");
+            return targetAffinity;
+        }
         
         if (skill.CostsHP) _HP -= skill.CostAmount;
         else _MP -= skill.CostAmount;
+
+        if (target != null)
+        {
+            targetAffinity = target.TakeDamage(skill.BaseDamage, skill.ElementType);
+            
+            string str = _stats.Name + " cast " + Skills[0].Name + " on " + target.Name + "!\n";
         
-        if (target != null) target.TakeDamage(skill.BaseDamage, skill.ElementType);
-        return true;
+            if (targetAffinity == AffinityTypes.WEAK)
+                str += target.Name + " was weak to " + _stats.Name + "'s attack!\n";
+            else if (targetAffinity == AffinityTypes.RESIST)
+                str += target.Name + " resisted " + _stats.Name + "'s attack!\n";
+            else if (targetAffinity == AffinityTypes.NULL)
+                str += target.Name + " blocked " + _stats.Name + "'s attack!\n";
+            else if (targetAffinity == AffinityTypes.ABSORB)
+                str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
+
+            str += target.Name + "'s HP is now " + target.HP + "!";
+            Debug.Log(str);
+        }
+        
+        return targetAffinity;
     }
     
     private void PassTurn() {}

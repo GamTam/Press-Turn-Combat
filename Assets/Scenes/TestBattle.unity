@@ -325,6 +325,13 @@ MonoBehaviour:
     MaxHP: 250
     MaxMP: 100
     BaseAttackType: 4
+    BaseAffinities:
+    - key: 64
+      value: 1
+    - key: 16
+      value: 2
+    - key: 512
+      value: 1
     STR: 10
     MAG: 8
     END: 3
@@ -367,6 +374,15 @@ MonoBehaviour:
     MaxHP: 175
     MaxMP: 100
     BaseAttackType: 8
+    BaseAffinities:
+    - key: 512
+      value: 4
+    - key: 4
+      value: 2
+    - key: 2
+      value: 2
+    - key: 256
+      value: 1
     STR: 10
     MAG: 8
     END: 3
@@ -409,6 +425,11 @@ MonoBehaviour:
     MaxHP: 300
     MaxMP: 100
     BaseAttackType: 2
+    BaseAffinities:
+    - key: 128
+      value: 3
+    - key: 16
+      value: 1
     STR: 12
     MAG: 3
     END: 15
@@ -520,6 +541,11 @@ MonoBehaviour:
     MaxHP: 300
     MaxMP: 100
     BaseAttackType: 2
+    BaseAffinities:
+    - key: 512
+      value: 3
+    - key: 256
+      value: 1
     STR: 12
     MAG: 8
     END: 15
@@ -558,10 +584,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
-    Name: Shuji Ikutski
+    Name: Louis Guiabern
     MaxHP: 175
     MaxMP: 100
-    BaseAttackType: 8
+    BaseAttackType: 4
+    BaseAffinities:
+    - key: 16
+      value: 1
     STR: 10
     MAG: 8
     END: 3
@@ -599,7 +628,7 @@ MonoBehaviour:
       StatusEffectChance: 0
       PhysCharge: 0
       MagCharge: 0
-      PressTurnsToAdd: 010000000100000001000000
+      PressTurnsToAdd: 010000000100000001000000i
   _HP: 0
   _MP: 0
   _currentStatusEffect: 0
@@ -619,7 +648,14 @@ MonoBehaviour:
     Name: Tohru Adachi
     MaxHP: 250
     MaxMP: 100
-    BaseAttackType: 4
+    BaseAttackType: 8
+    BaseAffinities:
+    - key: 64
+      value: 2
+    - key: 512
+      value: 3
+    - key: 128
+      value: 1
     STR: 10
     MAG: 8
     END: 3

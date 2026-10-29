@@ -19,22 +19,15 @@ public class FighterTeam : MonoBehaviour
     public void RandomAttack(Fighter target)
     {
         bool useSkill = Random.Range(0, 100) > 49;
+        AffinityTypes currentAffinity = AffinityTypes.NONE;
 
         if (!useSkill)
         {
-            _party[_actingPartyMember].BasicAttack(target);
-            Debug.Log(_party[_actingPartyMember].Name + " attacked " + target.Name + "!\n" + target.Name +
-                      "'s HP is now " + target.HP + "!");
+            currentAffinity = _party[_actingPartyMember].BasicAttack(target);
         }
         else
         {
-            bool canAffordSkill = _party[_actingPartyMember].UseSkill(_party[_actingPartyMember].Skills[0], target);
-            
-            if (canAffordSkill)
-                Debug.Log(_party[_actingPartyMember].Name + " cast " + _party[_actingPartyMember].Skills[0].Name +
-                          " on " + target.Name + "!\n" + target.Name + "'s HP is now " + target.HP + "!");
-            else
-                Debug.Log(_party[_actingPartyMember].Name + " tried to cast " + _party[_actingPartyMember].Skills[0].Name + "... but couldn't afford it!\n");
+            currentAffinity = _party[_actingPartyMember].UseSkill(_party[_actingPartyMember].Skills[0], target);
         }
 
         BattleManager.Instance.UpdatePressTurns(1);
