@@ -14,20 +14,27 @@ public struct Buffs
 
 public abstract class Fighter : MonoBehaviour
 {
-    [SerializeField] private FighterStats _stats = new FighterStats();
-    private int _HP;
-    private int _MP;
-
-    private Buffs _currentBuffs;
-    private Buffs _tempBuffs;
+    [SerializeField] protected FighterStats _stats = new FighterStats();
     
-    private StatusEffectType _currentStatusEffect;
+    [Space]
+    [SerializeField] protected int _HP;
+    [SerializeField] protected int _MP;
 
-    private bool _physCharge;
-    private bool _magCharge;
+    protected Buffs _currentBuffs;
+    protected Buffs _tempBuffs;
+    
+    [SerializeField] protected StatusEffectType _currentStatusEffect;
+
+    protected bool _physCharge;
+    protected bool _magCharge;
+    protected bool _turnComplete;
 
     public string Name => _stats.Name;
+    public string HP => _HP + "/" + _stats.MaxHP;
+    public string MP => _MP + "/" + _stats.MaxMP;
+    public Skill[] Skills => _stats.Skills.ToArray();
     public StatusEffectType CurrentStatusEffect => _currentStatusEffect;
+    public bool TurnComplete { get; set; }
 
     private void Awake()
     {
@@ -54,17 +61,21 @@ public abstract class Fighter : MonoBehaviour
         return true;
     }
 
-    private void BasicAttack(Fighter target)
+    public void BasicAttack(Fighter target)
     {
-        target.TakeDamage(_stats.STR, _stats.BaseAttackType);
+        target.TakeDamage((int) Random.Range(_stats.STR * 0.75f, _stats.STR * 1.25f), _stats.BaseAttackType);
     }
     
-    private void UseSkill(Skill skill, Fighter target = null)
+    public bool UseSkill(Skill skill, Fighter target = null)
     {
+        if (skill.CostsHP & _HP < skill.CostAmount) return false;
+        if (!skill.CostsHP & _MP < skill.CostAmount) return false;
+        
         if (skill.CostsHP) _HP -= skill.CostAmount;
         else _MP -= skill.CostAmount;
         
         if (target != null) target.TakeDamage(skill.BaseDamage, skill.ElementType);
+        return true;
     }
     
     private void PassTurn() {}

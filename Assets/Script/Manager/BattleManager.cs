@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,26 +27,39 @@ public class BattleManager : Singleton<BattleManager>
     
     public FighterTeam[] Teams = new FighterTeam[2];
 
-    public void Start()
+    //TEMP
+    [SerializeField] private float _timer;
+    private float _timerDuration = 5;
+    
+    public IEnumerator Start()
     {
+        _timer = _timerDuration;
+        yield return null;
         UpdateState();
-        Debug.Log("Current state: " + CurrentBattleState);
-
-        for (int i = 0; i < Teams.Length; i++)
-        {
-            string str = "Team " + i + "'s party members:\n";
-            foreach (Fighter fighter in Teams[i].PartyMembers)
-            {
-                str += fighter.Name + "\n";
-            }
-            Debug.Log(str);
-        }
     }
     
     public void UpdatePressTurns(int turnCost)
     {
         PressTurns.Remove(0);
+    }
 
+    //TEMP
+    private void Update()
+    {
+        _timer -= Time.deltaTime;
+        
+        if (_timer > 0f) return;
+        _timer = _timerDuration;
+
+        FighterTeam targetTeam = Teams[(CurrentTeam + 1) % 2];
+        Fighter targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
+
+        while (targetFighter.CurrentStatusEffect == StatusEffectType.DEAD)
+        {
+            targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
+        }
+        
+        Teams[CurrentTeam].ForceAttack(targetFighter);
         UpdateState();
     }
 
@@ -84,6 +98,21 @@ public class BattleManager : Singleton<BattleManager>
             {
                 if (fighter.CurrentStatusEffect != StatusEffectType.DEAD)
                     PressTurns.Add(PressTurn.Full);
+            }
+            
+            // TEMP
+            Debug.Log("<color=red>Current state: " + CurrentBattleState + "</color>");
+
+            for (int i = 0; i < Teams.Length; i++)
+            {
+                string str = "<color=red>Team " + i + "'s party members:\n";
+                foreach (Fighter fighter in Teams[i].PartyMembers)
+                {
+                    str += fighter.Name + " HP: " + fighter.HP + " MP: " + fighter.MP + "\n";
+                }
+
+                str += "</color>";
+                Debug.Log(str);
             }
         }
     }

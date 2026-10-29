@@ -322,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
     Name: Ronathan McDonathan
-    MaxHP: 100
+    MaxHP: 250
     MaxMP: 100
     BaseAttackType: 4
     STR: 10
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
     Name: Ryoji Mochizuki
-    MaxHP: 100
+    MaxHP: 175
     MaxMP: 100
     BaseAttackType: 8
     STR: 10
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
     Name: Demi-fiend
-    MaxHP: 100
+    MaxHP: 300
     MaxMP: 100
     BaseAttackType: 2
     STR: 12
@@ -473,6 +473,7 @@ MonoBehaviour:
   Teams:
   - {fileID: 0}
   - {fileID: 0}
+  _timer: 0
 --- !u!1 &1996927560
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,8 +507,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
-    Name: Evil Demi-fiend
-    MaxHP: 100
+    Name: Shadow Demi-fiend
+    MaxHP: 300
     MaxMP: 100
     BaseAttackType: 2
     STR: 12
@@ -545,8 +546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
-    Name: Evil Ryoji
-    MaxHP: 100
+    Name: Shadow Ryoji
+    MaxHP: 175
     MaxMP: 100
     BaseAttackType: 8
     STR: 10
@@ -584,8 +585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
   _stats:
-    Name: Evil Ronathan
-    MaxHP: 100
+    Name: Shadow Ronathan
+    MaxHP: 250
     MaxMP: 100
     BaseAttackType: 4
     STR: 10
