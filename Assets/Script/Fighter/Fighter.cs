@@ -42,7 +42,7 @@ public abstract class Fighter : MonoBehaviour
         _MP = _stats.MaxMP;
     }
 
-    public AffinityTypes TakeDamage(int attackPower, DamageTypes element)
+    private AffinityTypes AttemptDamage(int attackPower, DamageTypes element)
     {
         AffinityTypes affinityToAttack = AffinityTypes.NONE;
 
@@ -79,7 +79,7 @@ public abstract class Fighter : MonoBehaviour
 
     public AffinityTypes BasicAttack(Fighter target)
     {
-        AffinityTypes targetAffinity = target.TakeDamage((int)Random.Range(_stats.STR * 0.75f, _stats.STR * 1.25f),
+        AffinityTypes targetAffinity = target.AttemptDamage((int)Random.Range(_stats.STR * 0.75f, _stats.STR * 1.25f),
             _stats.BaseAttackType);
 
         string str = _stats.Name + " attacked " + target.Name + "!\n";
@@ -94,7 +94,7 @@ public abstract class Fighter : MonoBehaviour
             str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
 
         str += target.Name + "'s HP is now " + target.HP + "!";
-        Debug.Log(str);
+        UIManager.Instance.UpdateText(str);
 
         return targetAffinity;
     }
@@ -106,7 +106,7 @@ public abstract class Fighter : MonoBehaviour
         if (skill.CostsHP & _HP < skill.CostAmount ||
             !skill.CostsHP & _MP < skill.CostAmount)
         {
-            Debug.Log(_stats.Name + " tried to cast " + Skills[0].Name + "... but couldn't afford it!\n");
+            UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + Skills[0].Name + "... but couldn't afford it!\n");
             return targetAffinity;
         }
         
@@ -115,7 +115,7 @@ public abstract class Fighter : MonoBehaviour
 
         if (target != null)
         {
-            targetAffinity = target.TakeDamage(skill.BaseDamage, skill.ElementType);
+            targetAffinity = target.AttemptDamage(skill.BaseDamage, skill.ElementType);
             
             string str = _stats.Name + " cast " + Skills[0].Name + " on " + target.Name + "!\n";
         
@@ -128,8 +128,9 @@ public abstract class Fighter : MonoBehaviour
             else if (targetAffinity == AffinityTypes.ABSORB)
                 str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
 
-            str += target.Name + "'s HP is now " + target.HP + "!";
-            Debug.Log(str);
+            if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
+            else str += target.Name + "'s HP is now " + target.HP + "!";
+            UIManager.Instance.UpdateText(str);
         }
         
         return targetAffinity;

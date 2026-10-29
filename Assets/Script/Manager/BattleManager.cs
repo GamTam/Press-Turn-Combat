@@ -38,6 +38,86 @@ public class BattleManager : Singleton<BattleManager>
         UpdateState();
     }
     
+    //TEMP
+    private void Update()
+    {
+        _timer -= Time.deltaTime;
+        
+        if (_timer > 0f && !Keyboard.current.spaceKey.wasPressedThisFrame) return;
+        _timer = _timerDuration;
+        
+        if (CurrentBattleState == BattleState.Win || CurrentBattleState == BattleState.Lose)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+
+        FighterTeam targetTeam = Teams[(CurrentTeam + 1) % 2];
+        Fighter targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
+
+        while (targetFighter.CurrentStatusEffect == StatusEffectType.DEAD)
+        {
+            targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
+        }
+        
+        Teams[CurrentTeam].RandomAttack(targetFighter);
+        UpdateState();
+    }
+
+    private void UpdateState()
+    {
+        CheckIfTeamsAreAlive();
+
+        if (CurrentBattleState == BattleState.Win)
+        {
+            UIManager.Instance.UpdateText("You win! Congrats!");
+            return;
+        }
+        
+        if (CurrentBattleState == BattleState.Lose)
+        {
+            UIManager.Instance.UpdateText("You lose... That sucks, man...");
+            return;
+        }
+
+        if (PressTurns.Count == 0)
+        {
+            if (CurrentBattleState == BattleState.PlayerTurn)
+            {
+                CurrentBattleState = BattleState.EnemyTurn;
+                CurrentTeam = 1;
+            }
+            else if (CurrentBattleState == BattleState.EnemyTurn)
+            {
+                CurrentBattleState = BattleState.PlayerTurn;
+                CurrentTeam = 0;
+            }
+            
+            foreach (Fighter fighter in Teams[CurrentTeam].PartyMembers)
+            {
+                if (fighter.CurrentStatusEffect != StatusEffectType.DEAD)
+                    PressTurns.Add(PressTurn.Full);
+            }
+            
+            // TEMP
+            if (CurrentBattleState == BattleState.PlayerTurn) UIManager.Instance.UpdateText("<color=red>The enemy ran out of Press Turns,\n it's now your Turn!");
+            else if (CurrentBattleState == BattleState.EnemyTurn) UIManager.Instance.UpdateText("<color=red>You ran out of Press Turns,\n it's now the Enemy's Turn!");
+            
+            Debug.Log("<color=red>Current state: " + CurrentBattleState + "</color>");
+
+            for (int i = 0; i < Teams.Length; i++)
+            {
+                string str = "<color=red>Team " + i + "'s party members:\n";
+                foreach (Fighter fighter in Teams[i].PartyMembers)
+                {
+                    str += fighter.Name + " HP: " + fighter.HP + " MP: " + fighter.MP + "\n";
+                }
+
+                str += "</color>";
+                Debug.Log(str);
+            }
+        }
+    }
+    
     public void UpdatePressTurns(int turnCost, bool useHalfTurns)
     {
         if (!useHalfTurns)
@@ -70,81 +150,7 @@ public class BattleManager : Singleton<BattleManager>
             }
         }
     }
-
-    //TEMP
-    private void Update()
-    {
-        _timer -= Time.deltaTime;
-        
-        if (_timer > 0f && !Keyboard.current.spaceKey.wasPressedThisFrame) return;
-        _timer = _timerDuration;
-
-        FighterTeam targetTeam = Teams[(CurrentTeam + 1) % 2];
-        Fighter targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
-
-        while (targetFighter.CurrentStatusEffect == StatusEffectType.DEAD)
-        {
-            targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
-        }
-        
-        Teams[CurrentTeam].RandomAttack(targetFighter);
-        UpdateState();
-    }
-
-    private void UpdateState()
-    {
-        CheckIfTeamsAreAlive();
-
-        if (CurrentBattleState == BattleState.Win)
-        {
-            Debug.Log("You win! Congrats!");
-            UnityEditor.EditorApplication.isPlaying = false;
-            return;
-        }
-        
-        if (CurrentBattleState == BattleState.Lose)
-        {
-            Debug.Log("You lose... That sucks, man...");
-            UnityEditor.EditorApplication.isPlaying = false;
-            return;
-        }
-
-        if (PressTurns.Count == 0)
-        {
-            if (CurrentBattleState == BattleState.PlayerTurn)
-            {
-                CurrentBattleState = BattleState.EnemyTurn;
-                CurrentTeam = 1;
-            }
-            else if (CurrentBattleState == BattleState.EnemyTurn)
-            {
-                CurrentBattleState = BattleState.PlayerTurn;
-                CurrentTeam = 0;
-            }
-            
-            foreach (Fighter fighter in Teams[CurrentTeam].PartyMembers)
-            {
-                if (fighter.CurrentStatusEffect != StatusEffectType.DEAD)
-                    PressTurns.Add(PressTurn.Full);
-            }
-            
-            // TEMP
-            Debug.Log("<color=red>Current state: " + CurrentBattleState + "</color>");
-
-            for (int i = 0; i < Teams.Length; i++)
-            {
-                string str = "<color=red>Team " + i + "'s party members:\n";
-                foreach (Fighter fighter in Teams[i].PartyMembers)
-                {
-                    str += fighter.Name + " HP: " + fighter.HP + " MP: " + fighter.MP + "\n";
-                }
-
-                str += "</color>";
-                Debug.Log(str);
-            }
-        }
-    }
-
+    
     private void CheckIfTeamsAreAlive()
     {
         bool partyHasDied = true;
