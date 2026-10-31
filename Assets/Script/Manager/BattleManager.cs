@@ -22,7 +22,7 @@ public enum PressTurn
 public class BattleManager : Singleton<BattleManager>
 {
     private BattleState CurrentBattleState = BattleState.EnemyTurn;
-    private int CurrentTeam = 0;
+    public int CurrentTeam = 0;
     public List<PressTurn> PressTurns = new List<PressTurn>();
     
     public FighterTeam[] Teams = new FighterTeam[2];
@@ -53,16 +53,8 @@ public class BattleManager : Singleton<BattleManager>
             UnityEditor.EditorApplication.isPlaying = false;
             return;
         }
-
-        FighterTeam targetTeam = Teams[(CurrentTeam + 1) % 2];
-        Fighter targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
-
-        while (targetFighter.CurrentStatusEffect == StatusEffectType.DEAD)
-        {
-            targetFighter = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
-        }
         
-        Teams[CurrentTeam].RandomAttack(targetFighter);
+        Teams[CurrentTeam].InitiateFighterAction();
         UpdateState();
     }
 

@@ -16,13 +16,18 @@ public class Fighter : MonoBehaviour
     protected bool _physCharge;
     protected bool _magCharge;
     protected bool _turnComplete;
+    protected FighterTeam _currentTeam;
 
     public string Name => _stats.Name;
     public string HP => _HP + "/" + _stats.MaxHP;
     public string MP => _MP + "/" + _stats.MaxMP;
     public Skill[] Skills => _stats.Skills.ToArray();
     public StatusEffectType CurrentStatusEffect => _currentStatusEffect;
-    public bool TurnComplete { get; set; }
+
+    public void SetFighterTeam(FighterTeam team)
+    {
+        _currentTeam = team;
+    }
 
     private void Awake()
     {
@@ -65,7 +70,7 @@ public class Fighter : MonoBehaviour
         return false;
     }
 
-    public AffinityTypes BasicAttack(Fighter target)
+    protected AffinityTypes BasicAttack(Fighter target)
     {
         AffinityTypes targetAffinity = target.AttemptDamage((int)Random.Range(_stats.STR * 0.75f, _stats.STR * 1.25f),
             _stats.BaseAttackType);
@@ -88,8 +93,8 @@ public class Fighter : MonoBehaviour
 
         return targetAffinity;
     }
-    
-    public AffinityTypes UseSkill(Skill skill, Fighter target = null)
+
+    protected AffinityTypes UseSkill(Skill skill, Fighter target = null)
     {
         AffinityTypes targetAffinity = AffinityTypes.NONE;
         
@@ -129,5 +134,5 @@ public class Fighter : MonoBehaviour
     private void UseItem() {}
     private void Guard() {}
     
-    public virtual AffinityTypes TakeAction(Fighter target) { return AffinityTypes.NONE; }
+    public virtual void TakeAction() {}
 }

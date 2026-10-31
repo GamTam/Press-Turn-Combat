@@ -14,12 +14,20 @@ public class FighterTeam : MonoBehaviour
     {
         if (_playerTeam) BattleManager.Instance.Teams[0] = this;
         else BattleManager.Instance.Teams[1] = this;
+
+        foreach (Fighter fighter in _party)
+        {
+            fighter.SetFighterTeam(this);
+        }
     }
 
-    public void RandomAttack(Fighter target)
+    public void InitiateFighterAction()
     {
-        AffinityTypes currentAffinity = _party[_actingPartyMember].TakeAction(target);
+        _party[_actingPartyMember].TakeAction();
+    }
 
+    public void EndFighterAction(AffinityTypes currentAffinity)
+    {
         int pressTurnsUsed = 1;
         bool useHalfTurns = false;
 
