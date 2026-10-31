@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 [System.Serializable]
 public enum BattleState
 {
-        PlayerTurn,
-        EnemyTurn,
-        Win,
-        Lose
+    PlayerTurn,
+    EnemyTurn,
+    Win,
+    Lose
 }
 
 [System.Serializable]
@@ -30,6 +30,8 @@ public class BattleManager : Singleton<BattleManager>
     //TEMP
     [SerializeField] private float _timer;
     private float _timerDuration = 5f;
+
+    public bool IsPlayerTurn => CurrentTeam == 0;
     
     public IEnumerator Start()
     {
@@ -49,6 +51,7 @@ public class BattleManager : Singleton<BattleManager>
         if (CurrentBattleState == BattleState.Win || CurrentBattleState == BattleState.Lose)
         {
             UnityEditor.EditorApplication.isPlaying = false;
+            return;
         }
 
         FighterTeam targetTeam = Teams[(CurrentTeam + 1) % 2];
@@ -116,6 +119,8 @@ public class BattleManager : Singleton<BattleManager>
                 Debug.Log(str);
             }
         }
+        
+        UIManager.Instance.ShowBattleState();
     }
     
     public void UpdatePressTurns(int turnCost, bool useHalfTurns)

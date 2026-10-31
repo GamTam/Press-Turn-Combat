@@ -59,10 +59,10 @@ public class Fighter : MonoBehaviour
 
     private bool CheckIfCanUseSkill(Skill skill)
     {
-        if (skill.CostsHP & _HP <= skill.CostAmount) return false;
-        if (!skill.CostsHP & _MP <= skill.CostAmount) return false;
+        if (skill.CostsHP & _HP >= skill.CostAmount) return true;
+        if (!skill.CostsHP & _MP >= skill.CostAmount) return true;
 
-        return true;
+        return false;
     }
 
     public AffinityTypes BasicAttack(Fighter target)
@@ -82,7 +82,7 @@ public class Fighter : MonoBehaviour
             str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
 
         if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
-        else str += target.Name + "'s HP is now " + target.HP + "!";
+        // else str += target.Name + "'s HP is now " + target.HP + "!";
         
         UIManager.Instance.UpdateText(str);
 
@@ -93,7 +93,7 @@ public class Fighter : MonoBehaviour
     {
         AffinityTypes targetAffinity = AffinityTypes.NONE;
         
-        if (CheckIfCanUseSkill(skill))
+        if (!CheckIfCanUseSkill(skill))
         {
             UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + Skills[0].Name + "... but couldn't afford it!\n");
             return targetAffinity;
@@ -118,7 +118,7 @@ public class Fighter : MonoBehaviour
                 str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
 
             if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
-            else str += target.Name + "'s HP is now " + target.HP + "!";
+            // else str += target.Name + "'s HP is now " + target.HP + "!";
             UIManager.Instance.UpdateText(str);
         }
         
