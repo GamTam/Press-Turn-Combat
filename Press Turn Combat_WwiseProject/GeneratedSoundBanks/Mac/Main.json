@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{1C4451CE-8B1E-4300-AA56-B19EC5B6E403}",
+    "Language": "SFX",
+    "Hash": "{03A49293-031D-00CC-592C-8B9C9862253E}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "1066084609",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Battle.wav",
+      "CachePath": "C9/{C9BC7827-A589-F630-F453-58CC72C23C10}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "353794020",
+      "Name": "Play_MUS_Battle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Battle",
+      "GUID": "{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}",
+      "DurationType": "OneShot",
+      "DurationMin": "149.75511",
+      "DurationMax": "149.75511",
+      "MediaRefs": [
+       {
+        "Id": "1066084609"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5ADFEC02-D4D1-3450-FDC9-1FDE0DC5FE98}"
+ }
+}

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	353794020	Play_MUS_Battle			\Default Work Unit\Play_MUS_Battle	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1066084609	Battle	.cache\C9\{C9BC7827-A589-F630-F453-58CC72C23C10}.wem		\Containers\Default Work Unit\MUS_Battle\loop\Battle		26416896
+

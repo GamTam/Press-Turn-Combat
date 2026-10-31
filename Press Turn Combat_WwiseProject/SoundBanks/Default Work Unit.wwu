@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{985835F4-35F4-43D9-A54C-6C9A0C93CED2}" SchemaVersion="133">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{985835F4-35F4-43D9-A54C-6C9A0C93CED2}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{1C4451CE-8B1E-4300-AA56-B19EC5B6E403}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_MUS_Battle" ID="{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}" WorkUnitID="{A24FD2E7-4004-4E32-B802-8E851E62B073}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

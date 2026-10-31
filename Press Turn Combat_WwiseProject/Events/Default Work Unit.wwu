@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A24FD2E7-4004-4E32-B802-8E851E62B073}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A24FD2E7-4004-4E32-B802-8E851E62B073}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_MUS_Battle" ID="{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}">
+					<ChildrenList>
+						<Action Name="" ID="{6DD4AEA4-98C0-48FD-A183-C2F502EC365B}" ShortID="1031425630">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_Battle" ID="{6D45C44A-C00E-47E9-B74C-6F8AEDDF6817}" WorkUnitID="{03747570-B448-4278-A4BF-D237895C548A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

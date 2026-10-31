@@ -1,0 +1,45 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{1C4451CE-8B1E-4300-AA56-B19EC5B6E403}",
+    "Language": "SFX",
+    "Hash": "{F12BC0B3-43E1-DE1D-E69C-31D857BA4CE8}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "1066084609",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Battle.wav",
+      "CachePath": "C9/{C9BC7827-A589-F630-F453-58CC72C23C10}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "353794020",
+      "Name": "Play_MUS_Battle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_Battle",
+      "GUID": "{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1066084609"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4EF2BCA9-8096-E4B0-5B12-C824F195A459}"
+ }
+}
