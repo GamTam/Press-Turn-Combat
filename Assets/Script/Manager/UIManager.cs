@@ -42,6 +42,16 @@ public class UIManager : Singleton<UIManager>
         TargetSelectionInit();
     }
 
+    public void GuardButtonPressed()
+    {
+        OnPlayerFighterAction?.Invoke(null, FightActions.Guard, new Skill());
+    }
+    
+    public void PassButtonPressed()
+    {
+        OnPlayerFighterAction?.Invoke(null, FightActions.Pass, new Skill());
+    }
+    
     private void TargetSelectionInit()
     {
         _actionButtons.SetActive(false);

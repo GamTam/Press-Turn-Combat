@@ -17,6 +17,7 @@ public class Fighter : MonoBehaviour
     protected bool _magCharge;
     protected bool _turnComplete;
     protected FighterTeam _currentTeam;
+    protected bool _guarding;
 
     public string Name => _stats.Name;
     public string HP => _HP + "/" + _stats.MaxHP;
@@ -43,13 +44,23 @@ public class Fighter : MonoBehaviour
         catch { /* ignored */ }
 
         if (affinityToAttack == AffinityTypes.WEAK)
-            _HP -= attackPower * 2;
+        {
+            if (!_guarding) _HP -= attackPower * 2;
+            else
+            {
+                _HP -= (int)(attackPower * 0.75);
+                affinityToAttack = AffinityTypes.NONE;
+            }
+        }
         else if (affinityToAttack == AffinityTypes.RESIST)
             _HP -= attackPower / 2;
         else if (affinityToAttack == AffinityTypes.ABSORB)
             _HP += attackPower;
         else if (affinityToAttack == AffinityTypes.NONE)
-            _HP -= attackPower;
+        {
+            if (!_guarding) _HP -= attackPower;
+            else _HP -= (int)(attackPower * 0.75);
+        }
 
         if (_HP > _stats.MaxHP) _HP = _stats.MaxHP;
         
@@ -129,10 +140,20 @@ public class Fighter : MonoBehaviour
         
         return targetAffinity;
     }
-    
-    private void PassTurn() {}
-    private void UseItem() {}
-    private void Guard() {}
+
+    protected AffinityTypes PassTurn()
+    {
+        UIManager.Instance.UpdateText(_stats.Name + " passed things to the next person!\n");
+        return AffinityTypes.WEAK;
+    }
+    protected void UseItem() {}
+
+    protected AffinityTypes Guard()
+    {
+        UIManager.Instance.UpdateText(_stats.Name + " put up their guard!\n");
+        _guarding = true;
+        return AffinityTypes.NONE;
+    }
     
     public virtual void TakeAction() {}
 }
