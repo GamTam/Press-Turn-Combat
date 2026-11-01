@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -15,7 +16,8 @@ public class UIManager : Singleton<UIManager>
     private List<TMP_Text> _playerPartyHealth = new List<TMP_Text>();
     private List<TMP_Text> _enemyPartyHealth = new List<TMP_Text>();
 
-    public event Action<FightActions, Skill> OnPlayerFighterAction;
+    private FightActions _nextAction;
+    public event Action<Fighter, FightActions, Skill> OnPlayerFighterAction;
     
     public void UpdateText(string str)
     {
@@ -30,12 +32,33 @@ public class UIManager : Singleton<UIManager>
 
     public void FightButtonPressed()
     {
-        OnPlayerFighterAction?.Invoke(FightActions.Fight, new Skill());
+        _nextAction = FightActions.Fight;
+        TargetSelectionInit();
     }
     
     public void SkillButtonPressed()
     {
-        OnPlayerFighterAction?.Invoke(FightActions.Skill, new Skill());
+        _nextAction = FightActions.Skill;
+        TargetSelectionInit();
+    }
+
+    private void TargetSelectionInit()
+    {
+        _actionButtons.SetActive(false);
+        foreach (TMP_Text text in _enemyPartyHealth)
+        {
+            text.transform.GetComponentInChildren<Button>().interactable = true;
+        }
+    }
+
+    public void TargetSelectionEnd(Transform obj)
+    {
+        foreach (TMP_Text text in _enemyPartyHealth)
+        {
+            text.transform.GetComponentInChildren<Button>().interactable = false;
+        }
+        
+        OnPlayerFighterAction?.Invoke(BattleManager.Instance.Teams[1].PartyMembers[obj.GetSiblingIndex() - 1], _nextAction, new Skill());
     }
     
     public void ShowBattleState()

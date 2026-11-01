@@ -11,18 +11,9 @@ public class HumanControlledFighter : Fighter
         UIManager.Instance.OnPlayerFighterAction += UseSkill;
     }
 
-    private void UseSkill(FightActions actions, Skill skill)
+    private void UseSkill(Fighter target, FightActions actions, Skill skill)
     {
         AffinityTypes enemyAffinityToSkill = AffinityTypes.NONE;
-        
-        FighterTeam targetTeam = BattleManager.Instance.Teams[(BattleManager.Instance.CurrentTeam + 1) % 2];
-        
-        Fighter target = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
-
-        while (target.CurrentStatusEffect == StatusEffectType.DEAD)
-        {
-            target = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
-        }
         
         bool useSkill = actions == FightActions.Skill;
 
