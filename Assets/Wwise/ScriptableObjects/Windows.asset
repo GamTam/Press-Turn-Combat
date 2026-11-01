@@ -61,7 +61,6 @@ MonoBehaviour:
   - AdvancedSettings.m_MaximumHardwareTimeoutMs
   - AdvancedSettings.m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor
   - AdvancedSettings.m_SpatialAudioSettings.m_DiffractionShadowDegrees
-  - AdvancedSettings.m_SuspendAudioDuringFocusLoss
   - AdvancedSettings.m_RenderDuringFocusLoss
   - AdvancedSettings.m_SoundBankPersistentDataPath
   - AdvancedSettings.m_DebugOutOfRangeCheckEnabled
@@ -77,6 +76,7 @@ MonoBehaviour:
   - AdvancedSettings.m_MemoryMediaReservedLimit
   - AdvancedSettings.m_MemoryMediaAllocSizeHuge
   - AdvancedSettings.m_MemoryDebugLevel
+  - AdvancedSettings.m_SuspendAudioDuringFocusLoss
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
     m_StartupLanguage: English(US)

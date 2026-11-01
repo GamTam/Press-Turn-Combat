@@ -27,27 +27,17 @@ public class BattleManager : Singleton<BattleManager>
     
     public FighterTeam[] Teams = new FighterTeam[2];
 
-    //TEMP
-    [SerializeField] private float _timer;
-    private float _timerDuration = 5f;
-
     public bool IsPlayerTurn => CurrentTeam == 0;
     
     public IEnumerator Start()
     {
-        _timer = _timerDuration;
         yield return null;
         UpdateState();
+        ActionStart();
     }
     
-    //TEMP
-    private void Update()
+    public void ActionStart()
     {
-        _timer -= Time.deltaTime;
-        
-        if (_timer > 0f && !Keyboard.current.spaceKey.wasPressedThisFrame) return;
-        _timer = _timerDuration;
-        
         if (CurrentBattleState == BattleState.Win || CurrentBattleState == BattleState.Lose)
         {
             UnityEditor.EditorApplication.isPlaying = false;
@@ -55,10 +45,9 @@ public class BattleManager : Singleton<BattleManager>
         }
         
         Teams[CurrentTeam].InitiateFighterAction();
-        UpdateState();
     }
 
-    private void UpdateState()
+    public void UpdateState()
     {
         CheckIfTeamsAreAlive();
 
@@ -96,20 +85,6 @@ public class BattleManager : Singleton<BattleManager>
             // TEMP
             if (CurrentBattleState == BattleState.PlayerTurn) UIManager.Instance.UpdateText("<color=red>The enemy ran out of Press Turns,\n it's now your Turn!");
             else if (CurrentBattleState == BattleState.EnemyTurn) UIManager.Instance.UpdateText("<color=red>You ran out of Press Turns,\n it's now the Enemy's Turn!");
-            
-            Debug.Log("<color=red>Current state: " + CurrentBattleState + "</color>");
-
-            for (int i = 0; i < Teams.Length; i++)
-            {
-                string str = "<color=red>Team " + i + "'s party members:\n";
-                foreach (Fighter fighter in Teams[i].PartyMembers)
-                {
-                    str += fighter.Name + " HP: " + fighter.HP + " MP: " + fighter.MP + "\n";
-                }
-
-                str += "</color>";
-                Debug.Log(str);
-            }
         }
         
         UIManager.Instance.ShowBattleState();
@@ -146,6 +121,8 @@ public class BattleManager : Singleton<BattleManager>
                 }
             }
         }
+        
+        UpdateState();
     }
     
     private void CheckIfTeamsAreAlive()

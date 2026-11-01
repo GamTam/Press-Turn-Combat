@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -112,4 +113,20 @@ public struct FighterStats
 
     [Space]
     public List<Skill> Skills;
+}
+
+public enum FightActions
+{
+    Fight,
+    Skill,
+    Item,
+    Guard,
+    Pass,
+    Escape
+}
+
+public class FightActionEventArgs : EventArgs
+{
+    public FightActions FightAction;
+    public Skill Skill;
 }
