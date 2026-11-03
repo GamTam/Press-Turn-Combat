@@ -2890,9 +2890,9 @@ MonoBehaviour:
     BaseAttackType: 4
     BaseAffinities:
     - key: 128
-      value: 1
-    - key: 64
       value: 2
+    - key: 64
+      value: 1
     STR: 10
     MAG: 8
     END: 3
