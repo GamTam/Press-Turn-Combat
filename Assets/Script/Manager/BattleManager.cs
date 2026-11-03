@@ -21,7 +21,7 @@ public enum PressTurn
 
 public class BattleManager : Singleton<BattleManager>
 {
-    private BattleState CurrentBattleState = BattleState.EnemyTurn;
+    public BattleState CurrentBattleState = BattleState.EnemyTurn;
     public int CurrentTeam = 0;
     public List<PressTurn> PressTurns = new List<PressTurn>();
     
@@ -40,7 +40,11 @@ public class BattleManager : Singleton<BattleManager>
     {
         if (CurrentBattleState == BattleState.Win || CurrentBattleState == BattleState.Lose)
         {
+#if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
             return;
         }
         
@@ -54,12 +58,14 @@ public class BattleManager : Singleton<BattleManager>
         if (CurrentBattleState == BattleState.Win)
         {
             UIManager.Instance.UpdateText("You win! Congrats!");
+            UIManager.Instance.ShowBattleState();
             return;
         }
         
         if (CurrentBattleState == BattleState.Lose)
         {
             UIManager.Instance.UpdateText("You lose... That sucks, man...");
+            UIManager.Instance.ShowBattleState();
             return;
         }
 

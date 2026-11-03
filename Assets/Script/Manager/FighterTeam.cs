@@ -69,6 +69,9 @@ public class FighterTeam : MonoBehaviour
         }
         
         BattleManager.Instance.UpdatePressTurns(pressTurnsUsed, useHalfTurns);
+
+        if (BattleManager.Instance.CurrentBattleState == BattleState.Lose ||
+            BattleManager.Instance.CurrentBattleState == BattleState.Win) yield return new WaitForSeconds(5f);
         BattleManager.Instance.ActionStart();
     }
 }

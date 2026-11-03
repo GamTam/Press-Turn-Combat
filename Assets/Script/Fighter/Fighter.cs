@@ -115,7 +115,7 @@ public class Fighter : MonoBehaviour
         
         if (!CheckIfCanUseSkill(skill))
         {
-            UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + skill + "... but couldn't afford it!\n");
+            UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + skill.Name + "... but couldn't afford it!\n");
             return targetAffinity;
         }
         
@@ -126,7 +126,7 @@ public class Fighter : MonoBehaviour
         
         targetAffinity = target.AttemptDamage(skill.BaseDamage, skill.ElementType, skill.Healing);
             
-        string str = _stats.Name + " cast " + skill + " on " + target.Name + "!\n";
+        string str = _stats.Name + " cast " + skill.Name + " on " + target.Name + "!\n";
 
         if (skill.Healing)
         {
