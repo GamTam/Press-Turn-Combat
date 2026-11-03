@@ -33,13 +33,27 @@ public class AIControlledFighter : Fighter
             target = targetTeam.PartyMembers[Random.Range(0, targetTeam.PartyMembers.Count)];
         }
         
-        bool useSkill = Random.Range(0, 100) > 49;
+        bool useSkill = Random.Range(0, 100) > 30;
 
         if (!useSkill)
             enemyAffinityToSkill = BasicAttack(target);
         else
-            enemyAffinityToSkill = UseSkill(Skills[0], target);
-        
+        {
+            Skill skillToUse = Skills[Random.Range(0, Skills.Length)];
+
+            if (skillToUse.Healing)
+            {
+                target = _currentTeam.PartyMembers[Random.Range(0, _currentTeam.PartyMembers.Count)];
+
+                while (target.CurrentStatusEffect == StatusEffectType.DEAD)
+                {
+                    target = _currentTeam.PartyMembers[Random.Range(0, _currentTeam.PartyMembers.Count)];
+                }
+            }
+            
+            enemyAffinityToSkill = UseSkill(skillToUse, target);
+        }
+
         _currentTeam.EndFighterAction(enemyAffinityToSkill);
     }
 }

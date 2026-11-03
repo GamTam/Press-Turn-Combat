@@ -12,6 +12,8 @@ public class UIManager : Singleton<UIManager>
     [Space]
     [SerializeField] private TMP_Text _playerPartyHealthPrefab;
     [SerializeField] private TMP_Text _enemyPartyHealthPrefab;
+    [Space]
+    [SerializeField] private AK.Wwise.Event _confirmSound;
 
     private List<TMP_Text> _playerPartyHealth = new List<TMP_Text>();
     private List<TMP_Text> _enemyPartyHealth = new List<TMP_Text>();
@@ -33,23 +35,27 @@ public class UIManager : Singleton<UIManager>
     public void FightButtonPressed()
     {
         _nextAction = FightActions.Fight;
+        _confirmSound.Post(gameObject);
         TargetSelectionInit();
     }
     
     public void SkillButtonPressed()
     {
         _nextAction = FightActions.Skill;
+        _confirmSound.Post(gameObject);
         TargetSelectionInit();
     }
 
     public void GuardButtonPressed()
     {
         OnPlayerFighterAction?.Invoke(null, FightActions.Guard, new Skill());
+        _confirmSound.Post(gameObject);
     }
     
     public void PassButtonPressed()
     {
         OnPlayerFighterAction?.Invoke(null, FightActions.Pass, new Skill());
+        _confirmSound.Post(gameObject);
     }
     
     private void TargetSelectionInit()
@@ -69,6 +75,7 @@ public class UIManager : Singleton<UIManager>
         }
         
         OnPlayerFighterAction?.Invoke(BattleManager.Instance.Teams[1].PartyMembers[obj.GetSiblingIndex() - 1], _nextAction, new Skill());
+        _confirmSound.Post(gameObject);
     }
     
     public void ShowBattleState()

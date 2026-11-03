@@ -36,12 +36,14 @@ public class Fighter : MonoBehaviour
         _MP = _stats.MaxMP;
     }
 
-    private AffinityTypes AttemptDamage(int attackPower, DamageTypes element)
+    private AffinityTypes AttemptDamage(int attackPower, DamageTypes element, bool healing=false)
     {
         AffinityTypes affinityToAttack = AffinityTypes.NONE;
 
         try { affinityToAttack = _stats.BaseAffinities[element]; }
         catch { /* ignored */ }
+
+        if (healing) affinityToAttack = AffinityTypes.ABSORB;
 
         if (affinityToAttack == AffinityTypes.WEAK)
         {
@@ -70,6 +72,8 @@ public class Fighter : MonoBehaviour
             _currentStatusEffect = StatusEffectType.DEAD;
         }
 
+        if (healing) affinityToAttack = AffinityTypes.NONE;
+        
         return affinityToAttack;
     }
 
@@ -111,19 +115,25 @@ public class Fighter : MonoBehaviour
         
         if (!CheckIfCanUseSkill(skill))
         {
-            UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + Skills[0].Name + "... but couldn't afford it!\n");
+            UIManager.Instance.UpdateText(_stats.Name + " tried to cast " + skill + "... but couldn't afford it!\n");
             return targetAffinity;
         }
         
         if (skill.CostsHP) _HP -= skill.CostAmount;
         else _MP -= skill.CostAmount;
 
-        if (target != null)
-        {
-            targetAffinity = target.AttemptDamage(skill.BaseDamage, skill.ElementType);
-            
-            string str = _stats.Name + " cast " + Skills[0].Name + " on " + target.Name + "!\n";
+        if (target == null) return targetAffinity;
         
+        targetAffinity = target.AttemptDamage(skill.BaseDamage, skill.ElementType, skill.Healing);
+            
+        string str = _stats.Name + " cast " + skill + " on " + target.Name + "!\n";
+
+        if (skill.Healing)
+        {
+            str = _stats.Name + " healed " + target.Name + "!\n";
+        }
+        else
+        {
             if (targetAffinity == AffinityTypes.WEAK)
                 str += target.Name + " was weak to " + _stats.Name + "'s attack!\n";
             else if (targetAffinity == AffinityTypes.RESIST)
@@ -132,12 +142,12 @@ public class Fighter : MonoBehaviour
                 str += target.Name + " blocked " + _stats.Name + "'s attack!\n";
             else if (targetAffinity == AffinityTypes.ABSORB)
                 str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
-
-            if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
-            // else str += target.Name + "'s HP is now " + target.HP + "!";
-            UIManager.Instance.UpdateText(str);
         }
-        
+
+        if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
+        // else str += target.Name + "'s HP is now " + target.HP + "!";
+        UIManager.Instance.UpdateText(str);
+
         return targetAffinity;
     }
 
