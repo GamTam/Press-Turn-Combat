@@ -31,7 +31,7 @@
 |Moves|Element|
 |---|---|
 |Basic Attack|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|
-|Eiha|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|
+|Bufu|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|
 
 <br>
 
