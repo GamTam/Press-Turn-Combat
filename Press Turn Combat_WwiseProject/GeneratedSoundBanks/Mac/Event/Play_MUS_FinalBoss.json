@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3266472729",
+    "Type": "Event",
+    "GUID": "{2C6B607C-A123-46C1-BC65-B8095BAFC921}",
+    "Language": "SFX",
+    "Hash": "{D1162573-7524-5513-7B40-0EDB5E738696}",
+    "ObjectPath": "Play_MUS_FinalBoss",
+    "ShortName": "Play_MUS_FinalBoss",
+    "Path": "Event/Play_MUS_FinalBoss.bnk",
+    "Media": [
+     {
+      "Id": "921487217",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Persona 2 Final Boss DUAL MIX.wav",
+      "Path": "Media/921487217.wem",
+      "CachePath": "8C/{8CCE4660-4C8E-4B50-B8DB-DA59C7CE030D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3266472729",
+      "Name": "Play_MUS_FinalBoss",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MUS_FinalBoss",
+      "GUID": "{2C6B607C-A123-46C1-BC65-B8095BAFC921}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "921487217"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{26085EB9-28A1-09AB-562A-3BFDF8F5AB81}"
+ }
+}

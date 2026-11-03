@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 292162912}
   - component: {fileID: 292162911}
   - component: {fileID: 292162910}
+  - component: {fileID: 292162913}
   - component: {fileID: 292162909}
   m_Layer: 0
   m_Name: WwiseGlobal
@@ -853,7 +854,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292162908}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b70311d741d21439887f7206b5db13, type: 3}
   m_Name: 
@@ -866,7 +867,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 124bca6e6f338a445af7a9b02456e9ac, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a7c9da1881b133341b15da86c05be276, type: 2}
   useCallbacks: 0
   stopSoundOnDisable: 1
   Callbacks: []
@@ -944,6 +945,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292162913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292162908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e265098050b59a44d9a1362499965403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkBank
+  triggerList: ae8d9d44i
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0bfe1be90c869a048b12d91141937e21, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0eai
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &332932645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,10 +2003,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4482,6 +4508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0436e72f266db545ae8eb58fc77fd1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  CurrentBattleState: 1
   CurrentTeam: 0
   PressTurns: 
   Teams:
