@@ -1,4 +1,11 @@
-## Player Team
+**Affinity Types**
+|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Pierce.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Fire.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Elec.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Wind.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Light.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Dark.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Almighty.webp)|
+|-----|----|----|----|----|----|----|---|---|---|
+|Strike|Slash|Pierce|Fire|Ice|Elec|Wind|Light|Dark|Almighty|
+
+<br>
+
+## Player Team Affinities
 **Yosuke Hanamura**
 |![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Pierce.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Fire.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Elec.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Wind.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Light.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Dark.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Almighty.webp)|
 |-----|----|----|----|----|----|----|---|---|---|
@@ -35,7 +42,7 @@
 
 <br>
 
-## Enemy Team
+## Enemy Team Affinities
 **Tohru Adachi**
 |![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Pierce.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Fire.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Elec.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Wind.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Light.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Dark.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Almighty.webp)|
 |-----|----|----|----|----|----|----|---|---|---|
@@ -72,8 +79,3 @@
 |Basic Attack|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|
 |Eiha|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Dark.webp)|
 |Getsu-ei|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|
-
-
-|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Pierce.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Fire.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Elec.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Wind.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Light.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Dark.webp)|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Almighty.webp)|
-|-----|----|----|----|----|----|----|---|---|---|
-|Strike|Slash|Pierce|Fire|Ice|Elec|Wind|Light|Dark|Almighty|
