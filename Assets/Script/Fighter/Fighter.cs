@@ -146,6 +146,7 @@ public class Fighter : MonoBehaviour
         UIManager.Instance.UpdateText(_stats.Name + " passed things to the next person!\n");
         return AffinityTypes.WEAK;
     }
+    
     protected void UseItem() {}
 
     protected AffinityTypes Guard()

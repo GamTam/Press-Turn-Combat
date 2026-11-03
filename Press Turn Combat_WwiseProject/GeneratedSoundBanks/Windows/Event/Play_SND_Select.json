@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "887809010",
+    "Type": "Event",
+    "GUID": "{76498F52-B73C-42C9-9763-D4061D3288BF}",
+    "Language": "SFX",
+    "Hash": "{DF395235-BB39-6EB8-F6CD-E4BDC21942B2}",
+    "ObjectPath": "Play_SND_Select",
+    "ShortName": "Play_SND_Select",
+    "Path": "Event/Play_SND_Select.bnk",
+    "Media": [
+     {
+      "Id": "957169667",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "COMSE [116].wav",
+      "Path": "Media/957169667.wem",
+      "CachePath": "22/{2271DDCC-529F-461B-1F5B-7E1DFEE5F2FB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "887809010",
+      "Name": "Play_SND_Select",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SND_Select",
+      "GUID": "{76498F52-B73C-42C9-9763-D4061D3288BF}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.792",
+      "DurationMax": "1.792",
+      "MediaRefs": [
+       {
+        "Id": "957169667"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4E2ED57A-42CF-9676-A11E-4D606732C3C4}"
+ }
+}

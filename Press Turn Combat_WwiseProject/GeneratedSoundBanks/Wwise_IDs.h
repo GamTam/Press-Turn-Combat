@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_MUS_BATTLE = 353794020U;
+        static const AkUniqueID PLAY_MUS_FINALBOSS = 3266472729U;
+        static const AkUniqueID PLAY_SND_SELECT = 887809010U;
     } // namespace EVENTS
 
     namespace BANKS
