@@ -2400,13 +2400,13 @@ MonoBehaviour:
       PhysCharge: 0
       MagCharge: 0
       PressTurnsToAdd: 
-    - Name: Matarukaja
-      CostAmount: 5
-      CostsHP: 0
+    - Name: Single Shot
+      CostAmount: 35
+      CostsHP: 1
       BaseDamage: 0
       UseMagForDamageCalc: 0
-      ElementType: 1
-      Multihit: 1
+      ElementType: 8
+      Multihit: 0
       Healing: 0
       BuffType: 1
       BuffStats: 1
@@ -2457,6 +2457,22 @@ MonoBehaviour:
       BaseDamage: 50
       UseMagForDamageCalc: 1
       ElementType: 512
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+    - Name: Kouha
+      CostAmount: 4
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 1
+      ElementType: 256
       Multihit: 0
       Healing: 0
       BuffType: 0
