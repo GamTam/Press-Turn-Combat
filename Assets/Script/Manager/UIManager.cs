@@ -10,6 +10,9 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _turnText;
     [SerializeField] private GameObject _actionButtons;
     [Space]
+    [SerializeField] private GameObject _skillGrid;
+    [SerializeField] private Button _skillButtonPrefab;
+    [Space]
     [SerializeField] private TMP_Text _playerPartyHealthPrefab;
     [SerializeField] private TMP_Text _enemyPartyHealthPrefab;
     [Space]
@@ -17,6 +20,10 @@ public class UIManager : Singleton<UIManager>
 
     private List<TMP_Text> _playerPartyHealth = new List<TMP_Text>();
     private List<TMP_Text> _enemyPartyHealth = new List<TMP_Text>();
+
+    private List<Button> _skillButtonList = new List<Button>();
+    private List<Skill> _skillList = new List<Skill>();
+    private int _skillToUse = 0;
 
     private FightActions _nextAction;
     public event Action<Fighter, FightActions, Skill> OnPlayerFighterAction;
@@ -27,6 +34,11 @@ public class UIManager : Singleton<UIManager>
         _updateTextPrefab.gameObject.SetActive(true);
     }
 
+    public void UpdateSkillList(List<Skill> skillList)
+    {
+        _skillList = skillList;
+    }
+
     public void ToggleActionButtonVisibility(bool on = false)
     {
         _actionButtons.SetActive(on);
@@ -34,6 +46,7 @@ public class UIManager : Singleton<UIManager>
 
     public void FightButtonPressed()
     {
+        _skillToUse = 0;
         _nextAction = FightActions.Fight;
         _confirmSound.Post(gameObject);
         TargetSelectionInit();
@@ -41,8 +54,33 @@ public class UIManager : Singleton<UIManager>
     
     public void SkillButtonPressed()
     {
+        _skillToUse = 0;
         _nextAction = FightActions.Skill;
         _confirmSound.Post(gameObject);
+        _actionButtons.SetActive(false);
+        _skillGrid.SetActive(true);
+
+        foreach (Skill skill in _skillList)
+        {
+            Button button = Instantiate(_skillButtonPrefab, _skillButtonPrefab.transform.parent);
+            button.gameObject.SetActive(true);
+            _skillButtonList.Add(button);
+            string costType = skill.CostsHP ? "HP" : "SP";
+            button.GetComponentInChildren<TMP_Text>().text = skill.Name + " (" + skill.CostAmount + " " + costType + ")";
+        }
+    }
+
+    public void SkillSelect(Transform obj)
+    {
+        _skillToUse = obj.GetSiblingIndex() - 1;
+        
+        foreach (Button button in _skillButtonList)
+        {
+            Destroy(button.gameObject);
+        }
+        
+        _skillButtonList = new List<Button>();
+        
         TargetSelectionInit();
     }
 
@@ -74,7 +112,7 @@ public class UIManager : Singleton<UIManager>
             text.transform.GetComponentInChildren<Button>().interactable = false;
         }
         
-        OnPlayerFighterAction?.Invoke(BattleManager.Instance.Teams[1].PartyMembers[obj.GetSiblingIndex() - 1], _nextAction, new Skill());
+        OnPlayerFighterAction?.Invoke(BattleManager.Instance.Teams[1].PartyMembers[obj.GetSiblingIndex() - 1], _nextAction, _skillList[_skillToUse]);
         _confirmSound.Post(gameObject);
     }
     

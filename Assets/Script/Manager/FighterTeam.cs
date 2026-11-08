@@ -50,8 +50,6 @@ public class FighterTeam : MonoBehaviour
             yield return null;
         }
         
-        
-        
         int pressTurnsUsed = 1;
         bool useHalfTurns = false;
 

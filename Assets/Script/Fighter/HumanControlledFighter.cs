@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,7 @@ public class HumanControlledFighter : Fighter
         _guarding = false;
         UIManager.Instance.UpdateText(_stats.Name + "'s action!");
         UIManager.Instance.ToggleActionButtonVisibility(true);
+        UIManager.Instance.UpdateSkillList(Skills.ToList());
         UIManager.Instance.OnPlayerFighterAction += UseSkill;
     }
 
@@ -22,7 +24,7 @@ public class HumanControlledFighter : Fighter
                 enemyAffinityToSkill = BasicAttack(target);
                 break;
             case FightActions.Skill:
-                enemyAffinityToSkill = UseSkill(Skills[0], target);
+                enemyAffinityToSkill = UseSkill(skill, target);
                 break;
             case FightActions.Guard:
                 enemyAffinityToSkill = Guard();
