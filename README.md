@@ -26,6 +26,7 @@ When the application is opened, the player gets a view of a battle scene. The pl
 |---|---|
 |Basic Attack|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|
 |Garu|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Wind.webp)|
+|Single Shot|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Pierce.webp)|
 
 <br>
 
@@ -38,6 +39,7 @@ When the application is opened, the player gets a view of a battle scene. The pl
 |---|---|
 |Basic Attack|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Pierce.webp)|
 |Eiha|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Dark.webp)|
+|Kouha|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Light.webp)|
 
 <br>
 
@@ -50,6 +52,7 @@ When the application is opened, the player gets a view of a battle scene. The pl
 |---|---|
 |Basic Attack|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Strike.webp)|
 |Bufu|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Ice.webp)|
+|Cleave|![](https://github.com/GamTam/Press-Turn-Combat/blob/main/Affinity%20Icons/P3R_Icon_Slash.webp)|
 
 <br><br>
 
