@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f996aeb6a2c31da4db25f3536914afc9, type: 3}
   m_Name: 35E039C2-333E-4431-8BD3-076240BCD26D
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: BigHit
-  id: 2296922584
+  objectName: BP01_BigHit
+  id: 4089450632
   guid: 35E039C2-333E-4431-8BD3-076240BCD26D
   IsInUserDefinedSoundBank: 1

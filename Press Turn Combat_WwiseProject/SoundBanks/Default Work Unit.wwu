@@ -25,7 +25,14 @@
 									<ChildrenList>
 										<SoundBank Name="BP01" ID="{76202CAE-C7AE-4D9B-AA24-3A7BC5A99F81}">
 											<ObjectInclusionList>
-												<ObjectRef Name="VOC" ID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" WorkUnitID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" Origin="Manual" Filter="7"/>
+												<ObjectRef Name="BP01" ID="{7F5F56F9-BBDE-4A26-9A2C-921CCC9B561A}" WorkUnitID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" Origin="Manual" Filter="7"/>
+											</ObjectInclusionList>
+											<ObjectExclusionList/>
+											<GameSyncExclusionList/>
+										</SoundBank>
+										<SoundBank Name="BP02" ID="{302F44A4-7E23-4F05-B48A-F14A10D91BA4}">
+											<ObjectInclusionList>
+												<ObjectRef Name="BP02" ID="{4364B2EB-0A7A-481C-8B50-0BEABA16A2DF}" WorkUnitID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" Origin="Manual" Filter="7"/>
 											</ObjectInclusionList>
 											<ObjectExclusionList/>
 											<GameSyncExclusionList/>

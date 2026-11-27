@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{76202CAE-C7AE-4D9B-AA24-3A7BC5A99F81}",
     "Language": "English(US)",
-    "Hash": "{FCA52CE3-F0C6-5BBC-3A01-828406537F5E}",
+    "Hash": "{1E68DBBB-2BEE-506B-E19D-1CAEF116DBF7}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOC\\BATTLE\\PLAYER\\BP01",
     "ShortName": "BP01",
     "Path": "English(US)/BP01.bnk",
@@ -162,9 +162,9 @@
     ],
     "Events": [
      {
-      "Id": "180661997",
-      "Name": "Attack",
-      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Attack",
+      "Id": "1481962749",
+      "Name": "BP01_Attack",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BP01_Attack",
       "GUID": "{89B2C2B7-C295-43FC-9141-E59B30FE7875}",
       "DurationType": "OneShot",
       "DurationMin": "0.5647619",
@@ -182,9 +182,9 @@
       ]
      },
      {
-      "Id": "2296922584",
-      "Name": "BigHit",
-      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BigHit",
+      "Id": "4089450632",
+      "Name": "BP01_BigHit",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BP01_BigHit",
       "GUID": "{35E039C2-333E-4431-8BD3-076240BCD26D}",
       "DurationType": "OneShot",
       "DurationMin": "0.9605896",
@@ -202,9 +202,9 @@
       ]
      },
      {
-      "Id": "4203868981",
-      "Name": "Crit",
-      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Crit",
+      "Id": "1156926853",
+      "Name": "BP01_Crit",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BP01_Crit",
       "GUID": "{540EC447-CFC2-4659-ABF1-3F87963CC990}",
       "DurationType": "OneShot",
       "DurationMin": "1.3564172",
@@ -216,9 +216,9 @@
       ]
      },
      {
-      "Id": "445985469",
-      "Name": "Die",
-      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Die",
+      "Id": "1544818157",
+      "Name": "BP01_Die",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BP01_Die",
       "GUID": "{9971A5D6-3B25-4778-9493-D925E7B6CB94}",
       "DurationType": "OneShot",
       "DurationMin": "1.5763719",
@@ -239,9 +239,9 @@
       ]
      },
      {
-      "Id": "1116398592",
-      "Name": "Hit",
-      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Hit",
+      "Id": "1141463568",
+      "Name": "BP01_Hit",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BP01_Hit",
       "GUID": "{FA14A6FF-6C01-4C59-B0D7-76C7CC15994E}",
       "DurationType": "OneShot",
       "DurationMin": "0.6453968",
@@ -259,9 +259,9 @@
       ]
      },
      {
-      "Id": "2451239363",
-      "Name": "Persona",
-      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Persona",
+      "Id": "1293362835",
+      "Name": "BP01_Persona",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BP01_Persona",
       "GUID": "{8773FA40-8B97-4053-B451-AB69B0B2ABE4}",
       "DurationType": "OneShot",
       "DurationMin": "0.86530614",
@@ -284,6 +284,6 @@
     ]
    }
   ],
-  "FileHash": "{A19A8500-FA9C-13A7-85E2-E529982CFA38}"
+  "FileHash": "{BA894966-CC72-C595-71C4-106E8C606515}"
  }
 }

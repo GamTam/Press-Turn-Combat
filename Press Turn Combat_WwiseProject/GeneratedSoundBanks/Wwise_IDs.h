@@ -13,14 +13,22 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID ATTACK = 180661997U;
-        static const AkUniqueID BIGHIT = 2296922584U;
-        static const AkUniqueID CRIT = 4203868981U;
-        static const AkUniqueID DIE = 445985469U;
-        static const AkUniqueID HIT = 1116398592U;
+        static const AkUniqueID BP01_ATTACK = 1481962749U;
+        static const AkUniqueID BP01_BIGHIT = 4089450632U;
+        static const AkUniqueID BP01_CRIT = 1156926853U;
+        static const AkUniqueID BP01_DIE = 1544818157U;
+        static const AkUniqueID BP01_HIT = 1141463568U;
+        static const AkUniqueID BP01_PERSONA = 1293362835U;
+        static const AkUniqueID BP02_ATTACK = 2304148940U;
+        static const AkUniqueID BP02_BIGHIT = 2140884685U;
+        static const AkUniqueID BP02_DIE = 647336994U;
+        static const AkUniqueID BP02_HIT = 511144687U;
+        static const AkUniqueID BP02_ITEM = 1282233533U;
+        static const AkUniqueID BP02_OPENING = 3822017080U;
+        static const AkUniqueID BP02_PASS = 2002641387U;
+        static const AkUniqueID BP02_PERSONA = 2875378492U;
         static const AkUniqueID MUS_BATTLE_PLAY = 1347354028U;
         static const AkUniqueID MUS_FINALBOSS_PLAY = 3718607153U;
-        static const AkUniqueID PERSONA = 2451239363U;
         static const AkUniqueID SND_MENUCANCEL = 2065667538U;
         static const AkUniqueID SND_MENUCONFIRM = 3952789572U;
         static const AkUniqueID SND_MENUMOVE = 4224961979U;
@@ -30,6 +38,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID BP01 = 337919246U;
+        static const AkUniqueID BP02 = 337919245U;
         static const AkUniqueID MUS = 712897226U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS

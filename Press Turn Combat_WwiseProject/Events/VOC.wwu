@@ -7,7 +7,7 @@
 					<ChildrenList>
 						<Folder Name="BP01" ID="{7F5F56F9-BBDE-4A26-9A2C-921CCC9B561A}" ShortID="266639927">
 							<ChildrenList>
-								<Event Name="Attack" ID="{89B2C2B7-C295-43FC-9141-E59B30FE7875}">
+								<Event Name="BP01_Attack" ID="{89B2C2B7-C295-43FC-9141-E59B30FE7875}">
 									<ChildrenList>
 										<Action Name="" ID="{4447D936-4659-4DE0-82D5-C0B56507CBFE}" ShortID="93547717">
 											<ReferenceList>
@@ -18,7 +18,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="BigHit" ID="{35E039C2-333E-4431-8BD3-076240BCD26D}">
+								<Event Name="BP01_BigHit" ID="{35E039C2-333E-4431-8BD3-076240BCD26D}">
 									<ChildrenList>
 										<Action Name="" ID="{EE82FB06-3720-4825-9071-52C1E79CF1A8}" ShortID="876182829">
 											<ReferenceList>
@@ -29,7 +29,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Hit" ID="{FA14A6FF-6C01-4C59-B0D7-76C7CC15994E}">
+								<Event Name="BP01_Hit" ID="{FA14A6FF-6C01-4C59-B0D7-76C7CC15994E}">
 									<ChildrenList>
 										<Action Name="" ID="{1A78C016-481B-4EA6-9A5D-D1032C05A103}" ShortID="181170632">
 											<ReferenceList>
@@ -40,7 +40,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Crit" ID="{540EC447-CFC2-4659-ABF1-3F87963CC990}">
+								<Event Name="BP01_Crit" ID="{540EC447-CFC2-4659-ABF1-3F87963CC990}">
 									<ChildrenList>
 										<Action Name="" ID="{E62D1450-1366-487D-B979-A05928B554F2}" ShortID="184011833">
 											<ReferenceList>
@@ -51,7 +51,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Persona" ID="{8773FA40-8B97-4053-B451-AB69B0B2ABE4}">
+								<Event Name="BP01_Persona" ID="{8773FA40-8B97-4053-B451-AB69B0B2ABE4}">
 									<ChildrenList>
 										<Action Name="" ID="{21C55654-710D-4CB0-A318-7CD7A6CE116F}" ShortID="871255889">
 											<ReferenceList>
@@ -62,12 +62,104 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Die" ID="{9971A5D6-3B25-4778-9493-D925E7B6CB94}">
+								<Event Name="BP01_Die" ID="{9971A5D6-3B25-4778-9493-D925E7B6CB94}">
 									<ChildrenList>
 										<Action Name="" ID="{92954B12-7E39-431A-ACB2-E0DF44684D77}" ShortID="213196770">
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Die" ID="{B90BAE92-07D3-456B-AAEA-0F7232D9A85A}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="BP02" ID="{4364B2EB-0A7A-481C-8B50-0BEABA16A2DF}" ShortID="29443519">
+							<ChildrenList>
+								<Event Name="BP02_Item" ID="{27B38C8C-7254-4DB0-9471-7C6A516BA257}">
+									<ChildrenList>
+										<Action Name="" ID="{80C7A2F6-A203-47BF-9C72-17DA0F97F2E6}" ShortID="390273884">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Item" ID="{632DEA43-6514-413E-876A-CBF87E928154}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_Pass" ID="{938987BA-F2F9-4E14-9351-1758EA33EFA8}">
+									<ChildrenList>
+										<Action Name="" ID="{933E735B-8B71-4AA7-BA2F-907329F6FB74}" ShortID="336777582">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Pass" ID="{E65CFB89-6FB0-4692-97CF-0255C06E7773}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_Persona" ID="{A7AFC6D2-D252-402E-BA5E-AFA84BB3BF44}">
+									<ChildrenList>
+										<Action Name="" ID="{50BCBF48-0120-4C0B-A24B-8A17BCA2D41F}" ShortID="34643896">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Persona" ID="{EDD7B176-C7E9-426B-BE3B-9B8336FCDB67}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_Opening" ID="{3D5903AE-3BCB-47B9-BDD7-64BDD6213BFE}">
+									<ChildrenList>
+										<Action Name="" ID="{40087252-6E54-44F2-9D0B-85E19B8FA3C5}" ShortID="912760119">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Opening" ID="{26515D75-55FE-47C0-93DF-B6002B4D9FC6}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_Hit" ID="{E01DAB23-6971-42E0-B7A8-FC4F585F7BC7}">
+									<ChildrenList>
+										<Action Name="" ID="{A34B16FD-DA1B-47F4-8981-152FBA37F1FB}" ShortID="171169710">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hit" ID="{DF69B940-F3F3-47BF-B19C-0E368B893B70}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_BigHit" ID="{A94E9B61-0ED0-4AA4-AC3A-A3C94C51A58E}">
+									<ChildrenList>
+										<Action Name="" ID="{A8D79B26-8215-4CDB-9B47-0668C70C7477}" ShortID="909194011">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BigHit" ID="{12B46C2B-E21A-44AC-8D89-05253B35F8F0}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_Attack" ID="{16B108F2-BF91-4C93-BF36-418EFC058780}">
+									<ChildrenList>
+										<Action Name="" ID="{6EC14E5C-5669-46AA-8252-5ECE1C39D616}" ShortID="33386444">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Attack" ID="{8C8B5E08-FFF7-4D94-AD7F-F258EF937D89}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BP02_Die" ID="{64D5918F-9595-42A2-87FC-CD0326AEEF8F}">
+									<ChildrenList>
+										<Action Name="" ID="{0BD41E4E-D650-459A-BDB8-E440D0F2AFB1}" ShortID="719269230">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Die" ID="{44CDA597-DCE4-424E-8EB8-B47801F99B38}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
