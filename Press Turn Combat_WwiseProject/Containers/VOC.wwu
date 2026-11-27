@@ -340,6 +340,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Hit" ID="{C0B71A0D-5EAE-4F64-902A-5BBB91DE618B}" ShortID="413525984">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28196713-36DB-4613-8E81-08F05D2A0618}"/>

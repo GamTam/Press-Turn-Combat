@@ -1954,6 +1954,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a7343472b3f4a4e45be5aed0a5a73693, type: 2}
+  _backSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d27278f81544c04aa21ed209e662b6b, type: 2}
 --- !u!114 &652108944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,7 +3029,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b86963fc7900f4a90b69337fb79145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  AllWeak: []
+  AllWeak:
+  - key: 32
+    value: 1
+  - key: 2
+    value: 1
+  - key: 4
+    value: 1
+  - key: 128
+    value: 1
+  - key: 8
+    value: 1
+  - key: 16
+    value: 1
+  - key: 512
+    value: 1
+  - key: 64
+    value: 1
+  - key: 256
+    value: 1
   AllResist: []
   AllNull: []
   AllNormal: []

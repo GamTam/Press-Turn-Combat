@@ -15,6 +15,7 @@ public class UIManager : Singleton<UIManager>
     [Space] [SerializeField] private TMP_Text _playerPartyHealthPrefab;
     [SerializeField] private TMP_Text _enemyPartyHealthPrefab;
     [Space] [SerializeField] private AK.Wwise.Event _confirmSound;
+    [SerializeField] private AK.Wwise.Event _backSound;
 
     private List<TMP_Text> _playerPartyHealth = new List<TMP_Text>();
     private List<TMP_Text> _enemyPartyHealth = new List<TMP_Text>();
@@ -102,7 +103,7 @@ public class UIManager : Singleton<UIManager>
 
     public void BackButtonPressed()
     {
-        _confirmSound.Post(gameObject);
+        _backSound.Post(gameObject);
 
         if (_nextAction == FightActions.Fight && _selectingTargets) {
             TargetSelectionStop();
@@ -158,6 +159,8 @@ public class UIManager : Singleton<UIManager>
     {
         _selectingTargets = false;
         _selectingSkill = false;
+        
+        _backButton.gameObject.SetActive(false);
         
         foreach (Button button in _skillButtonList)
         {
