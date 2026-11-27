@@ -7,6 +7,7 @@ public class HumanControlledFighter : Fighter
 {
     public override void TakeAction()
     {
+        base.TakeAction();
         _guarding = false;
         UIManager.Instance.UpdateText(_stats.Name + "'s action!");
         UIManager.Instance.ToggleActionButtonVisibility(true);

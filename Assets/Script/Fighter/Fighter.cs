@@ -86,6 +86,9 @@ public class Fighter : MonoBehaviour
         
         if (_HP <= 0)
         {
+            _animator.Play("Take Damage");
+            _animator.SetBool("Dead", true);
+            
             _HP = 0;
             _currentStatusEffect = StatusEffectType.DEAD;
             _dieVoiceline.Post(gameObject);
@@ -95,10 +98,13 @@ public class Fighter : MonoBehaviour
             switch (affinityToAttack)
             {
                 case AffinityTypes.NONE:
+                case AffinityTypes.RESIST:
                     _hitVoiceline.Post(gameObject);
+                    _animator.Play("Take Damage");
                     break;
                 case AffinityTypes.WEAK:
                     _bigHitVoiceline.Post(gameObject);
+                    _animator.Play("Take Damage");
                     break;
             }
         }
@@ -179,6 +185,7 @@ public class Fighter : MonoBehaviour
                 str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
         }
         
+        _animator.Play("Skill");
         if (targetAffinity == AffinityTypes.WEAK)
             _bigAttackVoiceline.Post(gameObject); 
         else 
@@ -202,11 +209,15 @@ public class Fighter : MonoBehaviour
 
     protected AffinityTypes Guard()
     {
+        _animator.Play("Guard");
         UIManager.Instance.UpdateText(_stats.Name + " put up their guard!\n");
         _guarding = true;
         _guardVoiceline.Post(gameObject);
         return AffinityTypes.NONE;
     }
-    
-    public virtual void TakeAction() {}
+
+    public virtual void TakeAction()
+    {
+        _animator.Play("Idle");
+    }
 }

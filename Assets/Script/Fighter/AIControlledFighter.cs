@@ -6,6 +6,7 @@ public class AIControlledFighter : Fighter
 {
     public override void TakeAction()
     {
+        base.TakeAction();
         StartCoroutine(WaitForPlayerInput());
     }
 
