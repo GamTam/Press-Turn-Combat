@@ -532,6 +532,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64160765}
   m_CullTransparentMesh: 1
+--- !u!1 &90900610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90900611}
+  - component: {fileID: 90900615}
+  m_Layer: 0
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &90900611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90900610}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038024314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &90900615
+SpriteRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90900610}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ea7e79579aae9b742bba40cec4ba2983, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 5624652892732181178, guid: b1e94f48c98718c4da2cc8fd4027c54d, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.53, y: 0.61}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &95765390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,98 +1103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332932645}
   m_CullTransparentMesh: 1
---- !u!1 &424688937
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 424688939}
-  - component: {fileID: 424688938}
-  m_Layer: 0
-  m_Name: Ryoji
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &424688938
-SpriteRenderer:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424688937}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ea7e79579aae9b742bba40cec4ba2983, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 845ffec49c0f7fc4c80780450c50b24c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 53, y: 61}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
-  m_BlendShapeWeights: []
---- !u!4 &424688939
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424688937}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484671335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1698,7 @@ GameObject:
   - component: {fileID: 652108942}
   - component: {fileID: 652108941}
   - component: {fileID: 652108940}
+  - component: {fileID: 652108944}
   - component: {fileID: 652108939}
   - component: {fileID: 652108943}
   m_Layer: 5
@@ -1817,7 +1818,32 @@ MonoBehaviour:
   _confirmSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e3fe60820d336e44ba2d078360f41f3b, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a7343472b3f4a4e45be5aed0a5a73693, type: 2}
+--- !u!114 &652108944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652108938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e265098050b59a44d9a1362499965403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkBank
+  triggerList: f7e1664ci
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e9441c75066ecad47a8653f356c24d5f, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0eai
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &914782451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,74 +2047,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038024314}
-  - component: {fileID: 1038024313}
+  - component: {fileID: 1038024317}
+  - component: {fileID: 1038024316}
+  - component: {fileID: 1038024315}
   m_Layer: 0
-  m_Name: Jun
+  m_Name: Fighter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1038024313
-SpriteRenderer:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038024312}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ea7e79579aae9b742bba40cec4ba2983, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 97f10838ad87c6549810d10c52cd0d9e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 53, y: 61}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
-  m_BlendShapeWeights: []
 --- !u!4 &1038024314
 Transform:
   m_ObjectHideFlags: 0
@@ -2101,9 +2069,168 @@ Transform:
   m_LocalPosition: {x: -0.438, y: 0, z: -0.614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 90900611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038024315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038024312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
+  _stats:
+    Name: Ryoji Mochizuki
+    MaxHP: 175
+    MaxMP: 100
+    BaseAttackType: 8
+    BaseAffinities:
+    - key: 512
+      value: 5
+    - key: 2
+      value: 2
+    - key: 4
+      value: 2
+    - key: 256
+      value: 1
+    STR: 10
+    MAG: 8
+    END: 3
+    AGI: 6
+    LUK: 8
+    Skills:
+    - Name: Eiha
+      CostAmount: 4
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 1
+      ElementType: 512
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+    - Name: Kouha
+      CostAmount: 4
+      CostsHP: 0
+      BaseDamage: 50
+      UseMagForDamageCalc: 1
+      ElementType: 256
+      Multihit: 0
+      Healing: 0
+      BuffType: 0
+      BuffStats: 0
+      HowManyBuffTiers: 0
+      StatusEffect: 0
+      StatusEffectChance: 0
+      PhysCharge: 0
+      MagCharge: 0
+      PressTurnsToAdd: 
+  _HP: 0
+  _MP: 0
+  _currentStatusEffect: 0
+  _battleOpenVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _attackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: eece7b1b13a4c624c9883da759614683, type: 2}
+  _bigAttackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c0bac3260f7e4ff4a860ad2eda133895, type: 2}
+  _skillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 94c90ab11761485419d8c40e3bb0bfa7, type: 2}
+  _signatureSkillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _guardVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _hitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3221d5ea75cd7f341a671f9f6732e103, type: 2}
+  _bigHitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a99b9d53e457c914aabe48a727518333, type: 2}
+  _itemVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _dieVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 989b7c4383f7c0b4385705a48ca49394, type: 2}
+  _reviveVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+--- !u!114 &1038024316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038024312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e265098050b59a44d9a1362499965403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkBank
+  triggerList: f7e1664ci
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 455ecf9e082a40544a6d87237bc0370a, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0eai
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!95 &1038024317
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038024312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa39b4e25c27ec94f88d6d81de21226a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1119829966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,9 +2441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1195175900}
   - component: {fileID: 1195175901}
-  - component: {fileID: 1195175902}
-  - component: {fileID: 1195175903}
-  - component: {fileID: 1195175904}
   m_Layer: 0
   m_Name: PlayerTeam
   m_TagString: Untagged
@@ -2352,205 +2476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _party:
-  - {fileID: 1195175902}
-  - {fileID: 1195175903}
-  - {fileID: 1195175904}
+  - {fileID: 1038024315}
   _playerTeam: 1
---- !u!114 &1195175902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195175899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
-  _stats:
-    Name: Yosuke Hanamura
-    MaxHP: 250
-    MaxMP: 100
-    BaseAttackType: 4
-    BaseAffinities:
-    - key: 128
-      value: 2
-    - key: 64
-      value: 1
-    STR: 10
-    MAG: 8
-    END: 3
-    AGI: 6
-    LUK: 8
-    Skills:
-    - Name: Garu
-      CostAmount: 3
-      CostsHP: 0
-      BaseDamage: 50
-      UseMagForDamageCalc: 0
-      ElementType: 128
-      Multihit: 0
-      Healing: 0
-      BuffType: 0
-      BuffStats: 0
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 
-    - Name: Single Shot
-      CostAmount: 35
-      CostsHP: 1
-      BaseDamage: 0
-      UseMagForDamageCalc: 0
-      ElementType: 8
-      Multihit: 0
-      Healing: 0
-      BuffType: 1
-      BuffStats: 1
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 
-  _HP: 0
-  _MP: 0
-  _currentStatusEffect: 0
---- !u!114 &1195175903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195175899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
-  _stats:
-    Name: Ryoji Mochizuki
-    MaxHP: 175
-    MaxMP: 100
-    BaseAttackType: 8
-    BaseAffinities:
-    - key: 512
-      value: 5
-    - key: 2
-      value: 2
-    - key: 4
-      value: 2
-    - key: 256
-      value: 1
-    STR: 10
-    MAG: 8
-    END: 3
-    AGI: 6
-    LUK: 8
-    Skills:
-    - Name: Eiha
-      CostAmount: 4
-      CostsHP: 0
-      BaseDamage: 50
-      UseMagForDamageCalc: 1
-      ElementType: 512
-      Multihit: 0
-      Healing: 0
-      BuffType: 0
-      BuffStats: 0
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 
-    - Name: Kouha
-      CostAmount: 4
-      CostsHP: 0
-      BaseDamage: 50
-      UseMagForDamageCalc: 1
-      ElementType: 256
-      Multihit: 0
-      Healing: 0
-      BuffType: 0
-      BuffStats: 0
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 
-  _HP: 0
-  _MP: 0
-  _currentStatusEffect: 0
---- !u!114 &1195175904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195175899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30ad01cc4f78f974db32f148acea701e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HumanControlledFighter
-  _stats:
-    Name: Will McDonathan
-    MaxHP: 300
-    MaxMP: 100
-    BaseAttackType: 2
-    BaseAffinities:
-    - key: 16
-      value: 1
-    - key: 128
-      value: 2
-    - key: 512
-      value: 2
-    STR: 12
-    MAG: 3
-    END: 15
-    AGI: 11
-    LUK: 7
-    Skills:
-    - Name: Bufu
-      CostAmount: 3
-      CostsHP: 0
-      BaseDamage: 50
-      UseMagForDamageCalc: 0
-      ElementType: 32
-      Multihit: 0
-      Healing: 0
-      BuffType: 0
-      BuffStats: 0
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 
-    - Name: Cleave
-      CostAmount: 15
-      CostsHP: 1
-      BaseDamage: 50
-      UseMagForDamageCalc: 0
-      ElementType: 4
-      Multihit: 0
-      Healing: 0
-      BuffType: 0
-      BuffStats: 0
-      HowManyBuffTiers: 0
-      StatusEffect: 0
-      StatusEffectChance: 0
-      PhysCharge: 0
-      MagCharge: 0
-      PressTurnsToAdd: 
-  _HP: 0
-  _MP: 0
-  _currentStatusEffect: 0
 --- !u!1 &1223032975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,7 +3482,7 @@ GameObject:
   - component: {fileID: 1907660277}
   - component: {fileID: 1907660276}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3932,6 +3859,50 @@ MonoBehaviour:
   _HP: 0
   _MP: 0
   _currentStatusEffect: 0
+  _battleOpenVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _attackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _bigAttackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _skillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _signatureSkillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _guardVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _hitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _bigHitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _itemVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _dieVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _reviveVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &1996927567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4015,6 +3986,50 @@ MonoBehaviour:
   _HP: 0
   _MP: 0
   _currentStatusEffect: 0
+  _battleOpenVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _attackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _bigAttackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _skillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _signatureSkillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _guardVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _hitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _bigHitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _itemVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _dieVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _reviveVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &1996927568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4064,6 +4079,50 @@ MonoBehaviour:
   _HP: 0
   _MP: 0
   _currentStatusEffect: 0
+  _battleOpenVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _attackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _bigAttackVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _skillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _signatureSkillVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _guardVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _hitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _bigHitVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _itemVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _dieVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _reviveVoiceline:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4077,6 +4136,5 @@ SceneRoots:
   - {fileID: 1373696251}
   - {fileID: 1669590900}
   - {fileID: 292162912}
-  - {fileID: 424688939}
   - {fileID: 1038024314}
   - {fileID: 1299610297}

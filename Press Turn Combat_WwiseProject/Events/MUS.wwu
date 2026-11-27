@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9889A7E2-CF40-4CF3-A92E-30C7BBFA03FB}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="MUS" ID="{9889A7E2-CF40-4CF3-A92E-30C7BBFA03FB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="MUS_Battle_play" ID="{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}">
+					<ChildrenList>
+						<Action Name="" ID="{6DD4AEA4-98C0-48FD-A183-C2F502EC365B}" ShortID="1031425630">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_Battle" ID="{6D45C44A-C00E-47E9-B74C-6F8AEDDF6817}" WorkUnitID="{E9E35A5B-BD37-4487-B1AC-004FE9573325}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MUS_FinalBoss_play" ID="{2C6B607C-A123-46C1-BC65-B8095BAFC921}">
+					<ChildrenList>
+						<Action Name="" ID="{FB99C212-2535-40F2-9A12-4405B55A7C96}" ShortID="898370523">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_FinalBoss" ID="{AA747796-1BDC-495F-843B-29C65ECDB410}" WorkUnitID="{E9E35A5B-BD37-4487-B1AC-004FE9573325}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

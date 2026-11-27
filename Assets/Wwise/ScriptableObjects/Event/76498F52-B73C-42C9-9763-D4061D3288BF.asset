@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Play_SND_Select
   id: 887809010
   guid: 76498F52-B73C-42C9-9763-D4061D3288BF
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1

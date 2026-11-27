@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="VOC" ID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="BATTLE" ID="{EA00AF1B-6DB1-4053-8740-DB430A55F239}" ShortID="329448625">
+					<ChildrenList>
+						<Folder Name="BP01" ID="{7F5F56F9-BBDE-4A26-9A2C-921CCC9B561A}" ShortID="266639927">
+							<ChildrenList>
+								<Event Name="Attack" ID="{89B2C2B7-C295-43FC-9141-E59B30FE7875}">
+									<ChildrenList>
+										<Action Name="" ID="{4447D936-4659-4DE0-82D5-C0B56507CBFE}" ShortID="93547717">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Attack" ID="{D453F54E-F9F4-4DE2-BABB-5B21D1202112}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="BigHit" ID="{35E039C2-333E-4431-8BD3-076240BCD26D}">
+									<ChildrenList>
+										<Action Name="" ID="{EE82FB06-3720-4825-9071-52C1E79CF1A8}" ShortID="876182829">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="BigHit" ID="{C9131D59-273F-4542-9938-A744A28B7A1B}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Hit" ID="{FA14A6FF-6C01-4C59-B0D7-76C7CC15994E}">
+									<ChildrenList>
+										<Action Name="" ID="{1A78C016-481B-4EA6-9A5D-D1032C05A103}" ShortID="181170632">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Hit" ID="{C0B71A0D-5EAE-4F64-902A-5BBB91DE618B}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Crit" ID="{540EC447-CFC2-4659-ABF1-3F87963CC990}">
+									<ChildrenList>
+										<Action Name="" ID="{E62D1450-1366-487D-B979-A05928B554F2}" ShortID="184011833">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Crit" ID="{F8A4A210-40FD-4FD9-9D65-8E612B35D4A8}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Persona" ID="{8773FA40-8B97-4053-B451-AB69B0B2ABE4}">
+									<ChildrenList>
+										<Action Name="" ID="{21C55654-710D-4CB0-A318-7CD7A6CE116F}" ShortID="871255889">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Persona" ID="{93540FE2-636D-4B86-984E-E0E5B5365039}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Die" ID="{9971A5D6-3B25-4778-9493-D925E7B6CB94}">
+									<ChildrenList>
+										<Action Name="" ID="{92954B12-7E39-431A-ACB2-E0DF44684D77}" ShortID="213196770">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Die" ID="{B90BAE92-07D3-456B-AAEA-0F7232D9A85A}" WorkUnitID="{A34AF07C-7F8F-4BF6-BEF4-AEF3585C2F2F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

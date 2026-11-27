@@ -1,0 +1,65 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "712897226",
+    "Type": "User",
+    "GUID": "{1C4451CE-8B1E-4300-AA56-B19EC5B6E403}",
+    "Language": "SFX",
+    "Hash": "{EF859EF9-1993-89CB-B517-3FB81D80ABD0}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MUS",
+    "ShortName": "MUS",
+    "Path": "MUS.bnk",
+    "Media": [
+     {
+      "Id": "921487217",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Persona 2 Final Boss DUAL MIX.wav",
+      "CachePath": "8C/{8CCE4660-4C8E-4B50-B8DB-DA59C7CE030D}.wem"
+     },
+     {
+      "Id": "1066084609",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Battle.wav",
+      "CachePath": "C9/{C9BC7827-A589-F630-F453-58CC72C23C10}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1347354028",
+      "Name": "MUS_Battle_play",
+      "ObjectPath": "\\Events\\MUS\\MUS_Battle_play",
+      "GUID": "{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1066084609"
+       }
+      ]
+     },
+     {
+      "Id": "3718607153",
+      "Name": "MUS_FinalBoss_play",
+      "ObjectPath": "\\Events\\MUS\\MUS_FinalBoss_play",
+      "GUID": "{2C6B607C-A123-46C1-BC65-B8095BAFC921}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "921487217"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FDC86144-6516-E0D1-F856-46D040A69669}"
+ }
+}

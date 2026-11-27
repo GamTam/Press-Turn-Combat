@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f996aeb6a2c31da4db25f3536914afc9, type: 3}
   m_Name: 2C6B607C-A123-46C1-BC65-B8095BAFC921
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: Play_MUS_FinalBoss
-  id: 3266472729
+  objectName: MUS_FinalBoss_play
+  id: 3718607153
   guid: 2C6B607C-A123-46C1-BC65-B8095BAFC921
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1

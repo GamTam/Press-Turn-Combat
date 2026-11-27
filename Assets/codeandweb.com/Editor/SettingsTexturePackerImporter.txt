@@ -1,7 +1,7 @@
 version: 2
 tpsheetFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
-- Assets/Sprite/Jun.tpsheet
+- Assets/Sprite/BP02.tpsheet
 textureFileNames:
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 - Assets/Sprite/Jun.png

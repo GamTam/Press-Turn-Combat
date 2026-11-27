@@ -1,0 +1,15 @@
+{
+    "name": "com.elringus.spritedicing",
+    "version": "4.0.0",
+    "displayName": "SpriteDicing",
+    "description": "Compress sprite textures by eliminating identical areas.",
+    "unity": "6000.3",
+    "license": "MIT",
+    "licensesUrl": "https://github.com/elringus/sprite-dicing/blob/main/LICENSE.md",
+    "documentationUrl": "https://dicing.elringus.com/guide/unity",
+    "changelogUrl": "https://github.com/elringus/sprite-dicing/releases",
+    "author": {
+        "name": "Elringus",
+        "url": "https://elringus.com"
+    }
+}

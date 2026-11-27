@@ -1,0 +1,91 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "393239870",
+    "Type": "User",
+    "GUID": "{FD3E8018-56F2-4845-81AF-1AD393A43AA8}",
+    "Language": "SFX",
+    "Hash": "{B80794E6-8E27-C53C-6051-ADF5A9A2DD2D}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
+    "ShortName": "SFX",
+    "Path": "SFX.bnk",
+    "Media": [
+     {
+      "Id": "415998303",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SND_MenuConfirm.wav",
+      "CachePath": "DA/{DA20C553-B8AE-84C7-6590-1643ADEB3C75}.wem"
+     },
+     {
+      "Id": "449983891",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SND_MenuMove.wav",
+      "CachePath": "38/{38C203EE-CE22-F66A-B653-A057FEE26758}.wem"
+     },
+     {
+      "Id": "655055337",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SND_MenuCancel.wav",
+      "CachePath": "14/{1476F38D-C489-DA13-27CC-CD5E5D080F82}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2065667538",
+      "Name": "SND_MenuCancel",
+      "ObjectPath": "\\Events\\SND\\MENU\\SND_MenuCancel",
+      "GUID": "{76E21635-863F-483E-8F68-C4BC57FBC998}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.013146",
+      "DurationMax": "2.013146",
+      "MediaRefs": [
+       {
+        "Id": "655055337"
+       }
+      ]
+     },
+     {
+      "Id": "3952789572",
+      "Name": "SND_MenuConfirm",
+      "ObjectPath": "\\Events\\SND\\MENU\\SND_MenuConfirm",
+      "GUID": "{1C30C18A-1409-4AE5-8623-8C7EB9F4991A}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7025208",
+      "DurationMax": "1.7025208",
+      "MediaRefs": [
+       {
+        "Id": "415998303"
+       }
+      ]
+     },
+     {
+      "Id": "4224961979",
+      "Name": "SND_MenuMove",
+      "ObjectPath": "\\Events\\SND\\MENU\\SND_MenuMove",
+      "GUID": "{A5607693-8DEE-4451-A376-1F9C245697C9}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.215625",
+      "DurationMax": "1.215625",
+      "MediaRefs": [
+       {
+        "Id": "449983891"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{31015713-E011-0FAF-965D-BB6A9DB32307}"
+ }
+}

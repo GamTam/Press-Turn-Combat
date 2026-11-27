@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f28a4687fbd4a4fb864fa725fff475, type: 3}
   m_Name: 1C4451CE-8B1E-4300-AA56-B19EC5B6E403
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseBankReference
-  objectName: Main
-  id: 3161908922
+  objectName: MUS
+  id: 712897226
   guid: 1C4451CE-8B1E-4300-AA56-B19EC5B6E403

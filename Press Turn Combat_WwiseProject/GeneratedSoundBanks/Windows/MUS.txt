@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1347354028	MUS_Battle_play			\MUS\MUS_Battle_play	
+	3718607153	MUS_FinalBoss_play			\MUS\MUS_FinalBoss_play	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	921487217	Persona 2 Final Boss DUAL MIX	.cache\8C\{8CCE4660-4C8E-4B50-B8DB-DA59C7CE030D}.wem		\Containers\MUS\MUS_FinalBoss\loop\Persona 2 Final Boss DUAL MIX		15305620
+	1066084609	Battle	.cache\C9\{C9BC7827-A589-F630-F453-58CC72C23C10}.wem		\Containers\MUS\MUS_Battle\loop\Battle		26416896
+

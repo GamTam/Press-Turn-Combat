@@ -72,6 +72,7 @@ public class UIManager : Singleton<UIManager>
 
     public void SkillSelect(Transform obj)
     {
+        _confirmSound.Post(gameObject);
         _skillToUse = obj.GetSiblingIndex() - 1;
         
         foreach (Button button in _skillButtonList)

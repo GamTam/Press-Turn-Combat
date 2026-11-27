@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Fighter : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] protected FighterStats _stats = new FighterStats();
     
     [Space]
@@ -12,6 +13,21 @@ public class Fighter : MonoBehaviour
     protected Buffs _tempBuffs;
     
     [SerializeField] protected StatusEffectType _currentStatusEffect;
+    [SerializeField] private Animator _animator;
+    
+    [Space]
+    [Header("Voicelines")]
+    [SerializeField] private AK.Wwise.Event _battleOpenVoiceline;
+    [SerializeField] private AK.Wwise.Event _attackVoiceline;
+    [SerializeField] private AK.Wwise.Event _bigAttackVoiceline;
+    [SerializeField] private AK.Wwise.Event _skillVoiceline;
+    [SerializeField] private AK.Wwise.Event _signatureSkillVoiceline;
+    [SerializeField] private AK.Wwise.Event _guardVoiceline;
+    [SerializeField] private AK.Wwise.Event _hitVoiceline;
+    [SerializeField] private AK.Wwise.Event _bigHitVoiceline;
+    [SerializeField] private AK.Wwise.Event _itemVoiceline;
+    [SerializeField] private AK.Wwise.Event _dieVoiceline;
+    [SerializeField] private AK.Wwise.Event _reviveVoiceline;
 
     protected bool _physCharge;
     protected bool _magCharge;
@@ -34,6 +50,8 @@ public class Fighter : MonoBehaviour
     {
         _HP = _stats.MaxHP;
         _MP = _stats.MaxMP;
+
+        if (_animator == null) _animator = GetComponent<Animator>();
     }
 
     private AffinityTypes AttemptDamage(int attackPower, DamageTypes element, bool healing=false)
@@ -70,6 +88,19 @@ public class Fighter : MonoBehaviour
         {
             _HP = 0;
             _currentStatusEffect = StatusEffectType.DEAD;
+            _dieVoiceline.Post(gameObject);
+        }
+        else
+        {
+            switch (affinityToAttack)
+            {
+                case AffinityTypes.NONE:
+                    _hitVoiceline.Post(gameObject);
+                    break;
+                case AffinityTypes.WEAK:
+                    _bigHitVoiceline.Post(gameObject);
+                    break;
+            }
         }
 
         if (healing) affinityToAttack = AffinityTypes.NONE;
@@ -103,8 +134,12 @@ public class Fighter : MonoBehaviour
 
         if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
         // else str += target.Name + "'s HP is now " + target.HP + "!";
-        
         UIManager.Instance.UpdateText(str);
+        
+        if (targetAffinity == AffinityTypes.WEAK)
+            _bigAttackVoiceline.Post(gameObject); 
+        else 
+            _attackVoiceline.Post(gameObject);
 
         return targetAffinity;
     }
@@ -143,6 +178,11 @@ public class Fighter : MonoBehaviour
             else if (targetAffinity == AffinityTypes.ABSORB)
                 str += target.Name + " absorbed " + _stats.Name + "'s attack!\n";
         }
+        
+        if (targetAffinity == AffinityTypes.WEAK)
+            _bigAttackVoiceline.Post(gameObject); 
+        else 
+            _skillVoiceline.Post(gameObject);
 
         if (target.CurrentStatusEffect == StatusEffectType.DEAD) str += "<color=red>" + target.Name + " has collapsed!";
         // else str += target.Name + "'s HP is now " + target.HP + "!";
@@ -154,6 +194,7 @@ public class Fighter : MonoBehaviour
     protected AffinityTypes PassTurn()
     {
         UIManager.Instance.UpdateText(_stats.Name + " passed things to the next person!\n");
+        _guardVoiceline.Post(gameObject);
         return AffinityTypes.WEAK;
     }
     
@@ -163,6 +204,7 @@ public class Fighter : MonoBehaviour
     {
         UIManager.Instance.UpdateText(_stats.Name + " put up their guard!\n");
         _guarding = true;
+        _guardVoiceline.Post(gameObject);
         return AffinityTypes.NONE;
     }
     

@@ -3,13 +3,39 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{985835F4-35F4-43D9-A54C-6C9A0C93CED2}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Main" ID="{1C4451CE-8B1E-4300-AA56-B19EC5B6E403}">
+				<SoundBank Name="MUS" ID="{1C4451CE-8B1E-4300-AA56-B19EC5B6E403}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_MUS_Battle" ID="{DD382671-99CE-4E67-AAC4-9FC398CD6DAC}" WorkUnitID="{A24FD2E7-4004-4E32-B802-8E851E62B073}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MUS" ID="{9889A7E2-CF40-4CF3-A92E-30C7BBFA03FB}" WorkUnitID="{9889A7E2-CF40-4CF3-A92E-30C7BBFA03FB}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="SFX" ID="{FD3E8018-56F2-4845-81AF-1AD393A43AA8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="SND" ID="{7D77DB18-6742-4D8A-9FB4-E57B643FD420}" WorkUnitID="{7D77DB18-6742-4D8A-9FB4-E57B643FD420}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<Folder Name="VOC" ID="{0F7D0EB5-1A20-46B9-B850-6DECA23FCE66}" ShortID="599372883">
+					<ChildrenList>
+						<Folder Name="BATTLE" ID="{32886C01-96C3-420C-B299-B1FFCCE17A1D}" ShortID="459346573">
+							<ChildrenList>
+								<Folder Name="PLAYER" ID="{E4CF116F-2A16-417A-A858-8605B4C39405}" ShortID="454407688">
+									<ChildrenList>
+										<SoundBank Name="BP01" ID="{76202CAE-C7AE-4D9B-AA24-3A7BC5A99F81}">
+											<ObjectInclusionList>
+												<ObjectRef Name="VOC" ID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" WorkUnitID="{FD6CF01A-81C8-4BD9-B1E1-31C473274A9D}" Origin="Manual" Filter="7"/>
+											</ObjectInclusionList>
+											<ObjectExclusionList/>
+											<GameSyncExclusionList/>
+										</SoundBank>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

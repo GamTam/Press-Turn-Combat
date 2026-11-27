@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7D77DB18-6742-4D8A-9FB4-E57B643FD420}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="SND" ID="{7D77DB18-6742-4D8A-9FB4-E57B643FD420}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="MENU" ID="{D01B99ED-CDD6-4FE5-9E2E-8FDAB2865B0B}" ShortID="255818314">
+					<ChildrenList>
+						<Event Name="SND_MenuConfirm" ID="{1C30C18A-1409-4AE5-8623-8C7EB9F4991A}">
+							<ChildrenList>
+								<Action Name="" ID="{3D81F594-B3ED-4AB9-A84B-24D4FF10D075}" ShortID="599066510">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SND_MenuConfirm" ID="{CED0E5B7-5C47-4549-8FF6-DF08FCD38FFB}" WorkUnitID="{17237E90-A5DC-483A-8A73-BFDE2F144D75}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SND_MenuMove" ID="{A5607693-8DEE-4451-A376-1F9C245697C9}">
+							<ChildrenList>
+								<Action Name="" ID="{BA55E000-7A89-4478-9F51-ED09A197E493}" ShortID="859298989">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SND_MenuMove" ID="{132B976B-BD19-4DD6-80D4-1E70AF3E804A}" WorkUnitID="{17237E90-A5DC-483A-8A73-BFDE2F144D75}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SND_MenuCancel" ID="{76E21635-863F-483E-8F68-C4BC57FBC998}">
+							<ChildrenList>
+								<Action Name="" ID="{06AEE71A-FC34-444E-8656-CBCD3466573B}" ShortID="851775432">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SND_MenuCancel" ID="{12E1C79C-EF0A-47FB-9C70-1F53D9C53FB5}" WorkUnitID="{17237E90-A5DC-483A-8A73-BFDE2F144D75}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,289 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "337919246",
+    "Type": "User",
+    "GUID": "{76202CAE-C7AE-4D9B-AA24-3A7BC5A99F81}",
+    "Language": "English(US)",
+    "Hash": "{FCA52CE3-F0C6-5BBC-3A01-828406537F5E}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\VOC\\BATTLE\\PLAYER\\BP01",
+    "ShortName": "BP01",
+    "Path": "English(US)/BP01.bnk",
+    "Media": [
+     {
+      "Id": "34913442",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_hit_02.wav",
+      "CachePath": "DC/{DC5DD460-FB22-4755-9DA5-673469E5A0A5}.wem"
+     },
+     {
+      "Id": "49862015",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_crit_00.wav",
+      "CachePath": "7F/{7F755DE8-93F8-4DF2-5FE1-1A480891419A}.wem"
+     },
+     {
+      "Id": "190291129",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_bigHit_02.wav",
+      "CachePath": "CA/{CAB74543-A6C6-ABDD-150F-E0137E8FB22C}.wem"
+     },
+     {
+      "Id": "217117453",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_atl_02.wav",
+      "CachePath": "48/{48FFBFF1-0DA8-2D67-9D0A-DD90CD19A57E}.wem"
+     },
+     {
+      "Id": "250307763",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_per_03.wav",
+      "CachePath": "1E/{1E577701-372F-7ABD-7C14-F4AE6C996022}.wem"
+     },
+     {
+      "Id": "394867063",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_atk_01.wav",
+      "CachePath": "3E/{3E26F41F-92D8-F55B-F5A0-E38B9254EDFF}.wem"
+     },
+     {
+      "Id": "397425737",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_bigHit_00.wav",
+      "CachePath": "44/{44CBD882-0F4F-1D01-D816-0478C2E6E3F1}.wem"
+     },
+     {
+      "Id": "425806874",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_per_01.wav",
+      "CachePath": "FF/{FF4959CA-EA4A-30B1-D9AD-4C949B1AC418}.wem"
+     },
+     {
+      "Id": "444185120",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_hit_01.wav",
+      "CachePath": "C0/{C0832449-E78F-50CA-ED27-291CCDD863D3}.wem"
+     },
+     {
+      "Id": "480476270",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_per_02.wav",
+      "CachePath": "2D/{2DF591AD-1EB2-5620-D4F2-A7D26D23BF53}.wem"
+     },
+     {
+      "Id": "567490434",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_die_02.wav",
+      "CachePath": "23/{23465FD4-14AF-6C56-83DB-9FCEEA4EE529}.wem"
+     },
+     {
+      "Id": "628330791",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_bigHit_01.wav",
+      "CachePath": "37/{373DB50F-5AF7-864C-94E4-8AF3123A1B38}.wem"
+     },
+     {
+      "Id": "633729245",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_die_01.wav",
+      "CachePath": "AC/{ACA913C8-9D98-6DAD-AACE-A0BF9A259DF3}.wem"
+     },
+     {
+      "Id": "652126797",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_hit_00.wav",
+      "CachePath": "02/{023BC1C5-2686-7DFF-951C-CFFEAD494213}.wem"
+     },
+     {
+      "Id": "690548408",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_per_00.wav",
+      "CachePath": "FA/{FAC1286E-F9F7-441F-2D77-D491415A96E1}.wem"
+     },
+     {
+      "Id": "944695849",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_die_00.wav",
+      "CachePath": "D7/{D745A729-9A8D-11D7-4295-30C7C009E48D}.wem"
+     },
+     {
+      "Id": "965925133",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_die_03.wav",
+      "CachePath": "F9/{F9B9E138-CC71-52BD-7139-2DD14719518C}.wem"
+     },
+     {
+      "Id": "1031887797",
+      "Language": "English(US)",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "btl_bp01_atk_00.wav",
+      "CachePath": "47/{47D1CBB9-C0C5-A578-CFF3-37883F5B4E88}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "180661997",
+      "Name": "Attack",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Attack",
+      "GUID": "{89B2C2B7-C295-43FC-9141-E59B30FE7875}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5647619",
+      "DurationMax": "0.7846712",
+      "MediaRefs": [
+       {
+        "Id": "217117453"
+       },
+       {
+        "Id": "394867063"
+       },
+       {
+        "Id": "1031887797"
+       }
+      ]
+     },
+     {
+      "Id": "2296922584",
+      "Name": "BigHit",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\BigHit",
+      "GUID": "{35E039C2-333E-4431-8BD3-076240BCD26D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9605896",
+      "DurationMax": "1.1072109",
+      "MediaRefs": [
+       {
+        "Id": "190291129"
+       },
+       {
+        "Id": "397425737"
+       },
+       {
+        "Id": "628330791"
+       }
+      ]
+     },
+     {
+      "Id": "4203868981",
+      "Name": "Crit",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Crit",
+      "GUID": "{540EC447-CFC2-4659-ABF1-3F87963CC990}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3564172",
+      "DurationMax": "1.3564172",
+      "MediaRefs": [
+       {
+        "Id": "49862015"
+       }
+      ]
+     },
+     {
+      "Id": "445985469",
+      "Name": "Die",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Die",
+      "GUID": "{9971A5D6-3B25-4778-9493-D925E7B6CB94}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5763719",
+      "DurationMax": "3.551882",
+      "MediaRefs": [
+       {
+        "Id": "567490434"
+       },
+       {
+        "Id": "633729245"
+       },
+       {
+        "Id": "944695849"
+       },
+       {
+        "Id": "965925133"
+       }
+      ]
+     },
+     {
+      "Id": "1116398592",
+      "Name": "Hit",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Hit",
+      "GUID": "{FA14A6FF-6C01-4C59-B0D7-76C7CC15994E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6453968",
+      "DurationMax": "1.1878458",
+      "MediaRefs": [
+       {
+        "Id": "34913442"
+       },
+       {
+        "Id": "444185120"
+       },
+       {
+        "Id": "652126797"
+       }
+      ]
+     },
+     {
+      "Id": "2451239363",
+      "Name": "Persona",
+      "ObjectPath": "\\Events\\VOC\\BATTLE\\BP01\\Persona",
+      "GUID": "{8773FA40-8B97-4053-B451-AB69B0B2ABE4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.86530614",
+      "DurationMax": "1.1551474",
+      "MediaRefs": [
+       {
+        "Id": "250307763"
+       },
+       {
+        "Id": "425806874"
+       },
+       {
+        "Id": "480476270"
+       },
+       {
+        "Id": "690548408"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A19A8500-FA9C-13A7-85E2-E529982CFA38}"
+ }
+}

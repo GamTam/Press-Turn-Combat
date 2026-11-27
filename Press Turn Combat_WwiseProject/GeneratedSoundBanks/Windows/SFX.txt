@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2065667538	SND_MenuCancel			\SND\MENU\SND_MenuCancel	
+	3952789572	SND_MenuConfirm			\SND\MENU\SND_MenuConfirm	
+	4224961979	SND_MenuMove			\SND\MENU\SND_MenuMove	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	415998303	SND_MenuConfirm	.cache\DA\{DA20C553-B8AE-84C7-6590-1643ADEB3C75}.wem		\Containers\SND\MENU\SND_MenuConfirm		163538
+	449983891	SND_MenuMove	.cache\38\{38C203EE-CE22-F66A-B653-A057FEE26758}.wem		\Containers\SND\MENU\SND_MenuMove		116796
+	655055337	SND_MenuCancel	.cache\14\{1476F38D-C489-DA13-27CC-CD5E5D080F82}.wem		\Containers\SND\MENU\SND_MenuCancel		193358
+

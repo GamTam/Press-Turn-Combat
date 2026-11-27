@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{17237E90-A5DC-483A-8A73-BFDE2F144D75}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="SND" ID="{17237E90-A5DC-483A-8A73-BFDE2F144D75}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="MENU" ID="{D20B220A-6274-47FE-8450-57477950C1D6}" ShortID="333573204">
+					<ChildrenList>
+						<Sound Name="SND_MenuConfirm" ID="{CED0E5B7-5C47-4549-8FF6-DF08FCD38FFB}" ShortID="852825173">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28196713-36DB-4613-8E81-08F05D2A0618}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6128AE06-BA07-4E92-9E02-14C7A29C82E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SND_MenuConfirm" ID="{879B2406-E05E-49F4-B645-5E5ABA773A61}">
+									<Language>SFX</Language>
+									<AudioFile>SND_MenuConfirm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="415998303"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SND_MenuConfirm" ID="{879B2406-E05E-49F4-B645-5E5ABA773A61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SND_MenuCancel" ID="{12E1C79C-EF0A-47FB-9C70-1F53D9C53FB5}" ShortID="746150463">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28196713-36DB-4613-8E81-08F05D2A0618}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6128AE06-BA07-4E92-9E02-14C7A29C82E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SND_MenuCancel" ID="{4A7AF07D-BB88-402E-B017-7D9A3C73E589}">
+									<Language>SFX</Language>
+									<AudioFile>SND_MenuCancel.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="655055337"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SND_MenuCancel" ID="{4A7AF07D-BB88-402E-B017-7D9A3C73E589}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SND_MenuMove" ID="{132B976B-BD19-4DD6-80D4-1E70AF3E804A}" ShortID="533897631">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{28196713-36DB-4613-8E81-08F05D2A0618}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6128AE06-BA07-4E92-9E02-14C7A29C82E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SND_MenuMove" ID="{024AEF2D-D92B-43AE-863C-CAEB4AF5BAEE}">
+									<Language>SFX</Language>
+									<AudioFile>SND_MenuMove.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="449983891"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SND_MenuMove" ID="{024AEF2D-D92B-43AE-863C-CAEB4AF5BAEE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
