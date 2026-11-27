@@ -1,7 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
@@ -29,6 +32,11 @@ public class UIManager : Singleton<UIManager>
     private FightActions _nextAction;
     public event Action<Fighter, FightActions, Skill> OnPlayerFighterAction;
 
+    private void Awake()
+    {
+        InputManager.Controls.UI.Cancel.performed += BackButtonPressed;  
+    }
+    
     public void UpdateText(string str)
     {
         _updateTextPrefab.text = str;
@@ -42,9 +50,34 @@ public class UIManager : Singleton<UIManager>
 
     public void ToggleActionButtonVisibility(bool on = false)
     {
+        if (on)
+        {
+            Debug.Log("Shown action buttons");
+            InputManager.SetControlMode(InputManager.ControlType.Battle);
+            EventSystem.current.SetSelectedGameObject(null);
+            InputManager.Controls.Battle.Attack.performed += FightButtonPressed;
+            InputManager.Controls.Battle.Skill.performed += SkillButtonPressed;
+            InputManager.Controls.Battle.Guard.performed += GuardButtonPressed;
+            InputManager.Controls.Battle.Pass.performed += PassButtonPressed;
+        }
+        else
+        {
+            Debug.Log("Hid action buttons");
+            InputManager.SetControlMode(InputManager.ControlType.UI);
+            InputManager.Controls.Battle.Attack.performed -= FightButtonPressed;
+            InputManager.Controls.Battle.Skill.performed -= SkillButtonPressed;
+            InputManager.Controls.Battle.Guard.performed -= GuardButtonPressed;
+            InputManager.Controls.Battle.Pass.performed -= PassButtonPressed; 
+        }
+        
         _actionButtons.SetActive(on);
     }
 
+    private void FightButtonPressed(InputAction.CallbackContext ctx)
+    {
+        FightButtonPressed();
+    }
+    
     public void FightButtonPressed()
     {
         _skillToUse = 0;
@@ -52,6 +85,11 @@ public class UIManager : Singleton<UIManager>
         _confirmSound.Post(gameObject);
         _backButton.gameObject.SetActive(true);
         TargetSelectionInit();
+    }
+    
+    private void SkillButtonPressed(InputAction.CallbackContext ctx)
+    {
+        SkillButtonPressed();
     }
 
     public void SkillButtonPressed()
@@ -61,7 +99,7 @@ public class UIManager : Singleton<UIManager>
         _nextAction = FightActions.Skill;
         _confirmSound.Post(gameObject);
         _backButton.gameObject.SetActive(true);
-        _actionButtons.SetActive(false);
+        ToggleActionButtonVisibility(false);
         _skillGrid.SetActive(true);
 
         foreach (Skill skill in _skillList)
@@ -73,6 +111,8 @@ public class UIManager : Singleton<UIManager>
             button.GetComponentInChildren<TMP_Text>().text =
                 skill.Name + " (" + skill.CostAmount + " " + costType + ")";
         }
+        
+        EventSystem.current.SetSelectedGameObject(_skillButtonList[0].GetComponentInChildren<Button>().gameObject);
     }
 
     public void SkillSelect(Transform obj)
@@ -89,16 +129,32 @@ public class UIManager : Singleton<UIManager>
         TargetSelectionInit();
     }
 
+    private void GuardButtonPressed(InputAction.CallbackContext ctx)
+    {
+        GuardButtonPressed();
+    }
+    
     public void GuardButtonPressed()
     {
         OnPlayerFighterAction?.Invoke(null, FightActions.Guard, new Skill());
         _confirmSound.Post(gameObject);
+    }
+    
+    private void PassButtonPressed(InputAction.CallbackContext ctx)
+    {
+        PassButtonPressed();
     }
 
     public void PassButtonPressed()
     {
         OnPlayerFighterAction?.Invoke(null, FightActions.Pass, new Skill());
         _confirmSound.Post(gameObject);
+    }
+    
+    private void BackButtonPressed(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("aaaaaaaaaaaaaaaa");
+        if (_backButton.gameObject.activeSelf) BackButtonPressed();
     }
 
     public void BackButtonPressed()
@@ -107,19 +163,18 @@ public class UIManager : Singleton<UIManager>
 
         if (_nextAction == FightActions.Fight && _selectingTargets) {
             TargetSelectionStop();
-            _actionButtons.SetActive(true);
-            _selectingTargets = false;
+            ToggleActionButtonVisibility(true);
             _backButton.gameObject.SetActive(false);
         } 
         else if (_nextAction == FightActions.Skill && _selectingTargets)
         {
             TargetSelectionStop();
-            _selectingTargets = false;
         
             foreach (Button button in _skillButtonList)
             {
                 button.gameObject.SetActive(true);
             }
+            EventSystem.current.SetSelectedGameObject(_skillButtonList[0].GetComponentInChildren<Button>().gameObject);
         }
         else if (_nextAction == FightActions.Skill && _selectingSkill)
         {
@@ -131,18 +186,34 @@ public class UIManager : Singleton<UIManager>
             }
 
             _skillButtonList = new List<Button>();
-            _actionButtons.SetActive(true);
+            ToggleActionButtonVisibility(true);
         }
     }
 
     private void TargetSelectionInit()
     {
         _selectingTargets = true;
-        _actionButtons.SetActive(false);
+        ToggleActionButtonVisibility(false);
         _backButton.gameObject.SetActive(true);
+        StartCoroutine(EnableTargetSelectionButtons());
+    }
+
+    private IEnumerator EnableTargetSelectionButtons()
+    {
+        yield return null;
+        
         foreach (TMP_Text text in _enemyPartyHealth)
         {
             text.transform.GetComponentInChildren<Button>().interactable = true;
+        }
+
+        foreach (TMP_Text text in _enemyPartyHealth)
+        {
+            if (text.gameObject.activeSelf)
+            {
+                EventSystem.current.SetSelectedGameObject(text.GetComponentInChildren<Button>().gameObject);
+                yield break;
+            }
         }
     }
 

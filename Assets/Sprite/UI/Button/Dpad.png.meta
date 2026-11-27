@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6db6fbbbf874d624caf4c44355230250
+guid: 94238dcc7877ee548bbf0911b388a9fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6507188013824569139
-    second: Button 001_0
+      213: 2594508579795950057
+    second: Dpad_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button 001_0
+      name: Dpad_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 188
-        height: 188
+        width: 49
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc09e4d5af2d1b5a0800000000000000
-      internalID: -6507188013824569139
+      spriteID: 9e9d0799ecb810420800000000000000
+      internalID: 2594508579795950057
       vertices: []
       indices: 
       edges: []
